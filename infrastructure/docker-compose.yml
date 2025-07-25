@@ -1,0 +1,100 @@
+services:
+  # Infrastructure Services
+  redis:
+    image: redis:7-alpine
+    container_name: pos-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  # Database Services
+  mongodb:
+    image: mongo:7
+    container_name: pos-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  # Application Services
+  auth-service:
+    build: ../services/auth-service
+    container_name: pos-auth-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    environment:
+      - NODE_ENV=development
+      - PORT=8081
+      - JWT_SECRET=test_key
+      - REDIS_URL=redis://redis:6379
+      - ALLOWED_ORIGINS=true
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "node", "healthcheck.js"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    restart: unless-stopped
+    volumes:
+      - ../services/auth-service:/app
+      - node_modules_auth:/app/node_modules
+
+  user-service:
+    build: ../services/user-service
+    container_name: pos-user-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mongodb
+    environment:
+      - NODE_ENV=development
+      - PORT=8082
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@mongodb:27017/pos_users?authSource=admin
+      - JWT_SECRET=test_key
+      - ALLOWED_ORIGINS=true
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "node", "healthcheck.js"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    restart: unless-stopped
+    volumes:
+      - ../services/user-service:/app
+      - node_modules_user:/app/node_modules
+
+volumes:
+  redis_data:
+  mongodb_data:
+  node_modules_auth:
+  node_modules_user:
+
+networks:
+  pos-network:
+    driver: bridge

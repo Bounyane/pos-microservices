@@ -1,0 +1,59 @@
+# docker-compose.override.yml
+
+services:
+  # 🔁 Auth Service Dev Mode
+  auth-service:
+    volumes:
+      - ../services/auth-service:/app
+      - node_modules_auth:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - DEBUG=*
+    command: npm run dev
+
+  # 🔁 User Service Dev Mode
+  user-service:
+    volumes:
+      - ../services/user-service:/app
+      - node_modules_user:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - DEBUG=*
+    command: npm run dev
+
+  # 🔁 Redis Dev + Redis Commander
+  redis:
+    volumes:
+      - redis_dev_data:/data
+    ports:
+      - "6379:6379"
+    labels:
+      - "traefik.enable=true"
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: pos-redis-commander
+    hostname: redis-commander
+    ports:
+      - "8082:8081"
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    depends_on:
+      - redis
+    networks:
+      - pos-network
+    profiles:
+      - dev
+
+  # 🔁 MongoDB Dev
+  mongodb:
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_dev_data:/data/db
+
+volumes:
+  node_modules_auth:
+  node_modules_user:
+  redis_dev_data:
+  mongodb_dev_data:
