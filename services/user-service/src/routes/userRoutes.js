@@ -17,6 +17,12 @@ router.get('/', userController.getUsers);
 // Get user by email
 router.get('/email/:email', userController.getUserByEmail);
 
+// Get all managers
+router.get('/managers', userController.getManagers);
+
+// Get all dealers
+router.get('/dealers', userController.getDealers);
+
 // Get user by ID 
 router.get('/:id', userController.getUserById);
 
