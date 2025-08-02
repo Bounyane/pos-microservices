@@ -1,25 +1,37 @@
 # docker-compose.override.yml
 
 services:
+  # 🔁 API Gateway Dev Mode
+  api-gateway:
+    volumes:
+      - ../services/api-gateway:/app
+      - node_modules_gateway:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - DEBUG=*
+    command: npm start
+
   # 🔁 Auth Service Dev Mode
   auth-service:
     volumes:
       - ../services/auth-service:/app
+      - ../shared/libraries/user.proto:/app/user.proto
       - node_modules_auth:/app/node_modules
     environment:
       - NODE_ENV=development
       - DEBUG=*
-    command: npm run dev
+    command: npm start
 
   # 🔁 User Service Dev Mode
   user-service:
     volumes:
       - ../services/user-service:/app
+      - ../shared/libraries/user.proto:/app/user.proto
       - node_modules_user:/app/node_modules
     environment:
       - NODE_ENV=development
       - DEBUG=*
-    command: npm run dev
+    command: npm start
 
   # 🔁 Redis Dev + Redis Commander
   redis:
@@ -53,6 +65,7 @@ services:
       - mongodb_dev_data:/data/db
 
 volumes:
+  node_modules_gateway:
   node_modules_auth:
   node_modules_user:
   redis_dev_data:
