@@ -1,13 +1,12 @@
 const app = require('./src/app');
 const config = require('./src/config/app');
 const logger = require('./src/utils/logger');
+const grpcService = require('./src/grpcServer'); 
 
 const PORT = config.port;
 
 const server = app.listen(PORT, () => {
   logger.info(`User service running on port ${PORT}`);
-  logger.info(`Environment: ${config.nodeEnv}`);
-  logger.info(`Health check: http://localhost:${PORT}/api/health`);
 });
 
 // Handle server errors
@@ -31,5 +30,7 @@ server.on('error', (error) => {
       throw error;
   }
 });
+
+grpcService();
 
 module.exports = server; 

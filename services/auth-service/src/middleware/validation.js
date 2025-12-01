@@ -21,19 +21,6 @@ const validateLogin = (req, res, next) => {
   next();
 };
 
-// Validate token validation request
-const validateTokenRequest = (req, res, next) => {
-  const { token } = req.body;
-  
-  if (!token) {
-    return res.status(400).json({ 
-      error: 'Token is required' 
-    });
-  }
-  
-  next();
-};
-
 
 // Sanitize user input
 const sanitizeInput = (req, res, next) => {
@@ -55,6 +42,5 @@ const sanitizeInput = (req, res, next) => {
 
 module.exports = {
   validateLogin,
-  validateTokenRequest,
   sanitizeInput
 }; 

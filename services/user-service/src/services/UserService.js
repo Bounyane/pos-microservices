@@ -1,6 +1,4 @@
 const User = require('../models/User');
-const Manager = require('../models/Manager');
-const Dealer = require('../models/Dealer');
 const logger = require('../utils/logger');
 
 class UserService {
@@ -188,225 +186,26 @@ class UserService {
     }
   }
 
+
+  
+
   /**
-   * Create manager profile
+   * Verify user credentials (for gRPC)
    */
-  async createManagerProfile(userId, managerData) {
+  async verifyCredentials(email, password) {
     try {
-      // Check if user exists and has manager role
-      const user = await User.findById(userId);
+      const user = await User.findOne({ email });
       if (!user) {
-        throw new Error('User not found');
+        return { success: false, userId: '', role: '', error: 'User not found' };
       }
-
-      //update user to manager role
-      user.role = 'MANAGER';
-      await user.save();
-
-
-      // Check if manager profile already exists
-      const existingManager = await Manager.findOne({ userId });
-      if (existingManager) {
-        throw new Error('Manager profile already exists for this user');
+      const isMatch = await user.comparePassword(password);
+      if (!isMatch) {
+        return { success: false, userId: '', role: '', error: 'Invalid password' };
       }
-
-      // Create manager profile
-      const manager = new Manager({
-        userId,
-        ...managerData
-      });
-      await manager.save();
-
-      logger.info(`Manager profile created for user: ${user.email}`);
-
-      return manager.getPublicProfile();
+      return { success: true, userId: user._id.toString(), role: user.role, error: '' };
     } catch (error) {
-      logger.error('Error creating manager profile:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Create dealer profile
-   */
-  async createDealerProfile(userId, dealerData) {
-    try {
-      // Check if user exists and has dealer role
-      const user = await User.findById(userId);
-      if (!user) {
-        throw new Error('User not found');
-      }
-
-       //update user to dealer role
-      user.role = 'DEALER';
-      await user.save();
-
-      // Check if dealer profile already exists
-      const existingDealer = await Dealer.findOne({ userId });
-      if (existingDealer) {
-        throw new Error('Dealer profile already exists for this user');
-      }
-
-      // Create dealer profile
-      const dealer = new Dealer({
-        userId,
-        ...dealerData
-      });
-      await dealer.save();
-
-      logger.info(`Dealer profile created for user: ${user.email}`);
-
-      return dealer.getPublicProfile();
-    } catch (error) {
-      logger.error('Error creating dealer profile:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Get manager profile
-   */
-  async getManagerProfile(userId) {
-    try {
-      const manager = await Manager.findOne({ userId }).populate('userId', 'firstName lastName email phone');
-      if (!manager) {
-        throw new Error('Manager profile not found');
-      }
-      return manager.getPublicProfile();
-    } catch (error) {
-      logger.error('Error getting manager profile:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Get dealer profile
-   */
-  async getDealerProfile(userId) {
-    try {
-      const dealer = await Dealer.findOne({ userId }).populate('userId', 'firstName lastName email phone');
-      if (!dealer) {
-        throw new Error('Dealer profile not found');
-      }
-      return dealer.getPublicProfile();
-    } catch (error) {
-      logger.error('Error getting dealer profile:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Update manager profile
-   */
-  async updateManagerProfile(userId, updateData) {
-    try {
-      const manager = await Manager.findOne({ userId });
-      if (!manager) {
-        throw new Error('Manager profile not found');
-      }
-
-      Object.assign(manager, updateData);
-      await manager.save();
-
-      logger.info(`Manager profile updated for user: ${userId}`);
-
-      return manager.getPublicProfile();
-    } catch (error) {
-      logger.error('Error updating manager profile:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Update dealer profile
-   */
-  async updateDealerProfile(userId, updateData) {
-    try {
-      const dealer = await Dealer.findOne({ userId });
-      if (!dealer) {
-        throw new Error('Dealer profile not found');
-      }
-
-      Object.assign(dealer, updateData);
-      await dealer.save();
-
-      logger.info(`Dealer profile updated for user: ${userId}`);
-
-      return dealer.getPublicProfile();
-    } catch (error) {
-      logger.error('Error updating dealer profile:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Get all managers with filters
-   */
-  async getManagers(filters = {}, page = 1, limit = 10) {
-    try {
-      const skip = (page - 1) * limit;
-      const query = {};
-
-      if (filters.storeType) query.storeType = filters.storeType;
-      if (filters.isVerified !== undefined) query.isVerified = filters.isVerified;
-      if (filters.city) query['storeAddress.city'] = { $regex: filters.city, $options: 'i' };
-
-      const managers = await Manager.find(query)
-        .populate('userId', 'firstName lastName email phone status')
-        .skip(skip)
-        .limit(limit)
-        .sort({ createdAt: -1 });
-
-      const total = await Manager.countDocuments(query);
-
-      return {
-        managers,
-        pagination: {
-          page,
-          limit,
-          total,
-          pages: Math.ceil(total / limit)
-        }
-      };
-    } catch (error) {
-      logger.error('Error getting managers:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Get all dealers with filters
-   */
-  async getDealers(filters = {}, page = 1, limit = 10) {
-    try {
-      const skip = (page - 1) * limit;
-      const query = {};
-
-      if (filters.dealerType) query.dealerType = filters.dealerType;
-      if (filters.isVerified !== undefined) query.isVerified = filters.isVerified;
-      if (filters.city) query['businessAddress.city'] = { $regex: filters.city, $options: 'i' };
-      if (filters.specialty) query.specialties = { $in: [filters.specialty] };
-
-      const dealers = await Dealer.find(query)
-        .populate('userId', 'firstName lastName email phone status')
-        .skip(skip)
-        .limit(limit)
-        .sort({ 'rating.average': -1, 'rating.count': -1 });
-
-      const total = await Dealer.countDocuments(query);
-
-      return {
-        dealers,
-        pagination: {
-          page,
-          limit,
-          total,
-          pages: Math.ceil(total / limit)
-        }
-      };
-    } catch (error) {
-      logger.error('Error getting dealers:', error);
-      throw error;
+      logger.error('Error verifying credentials:', error);
+      return { success: false, userId: '', role: '', error: 'Internal error' };
     }
   }
 }

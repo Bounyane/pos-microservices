@@ -1,0 +1,27 @@
+the first time you’re running it,
+docker-compose up --build
+
+If the images are already built and you just want to start them:
+docker-compose up
+
+To run it in the background (detached mode):
+docker-compose up -d
+
+See which containers are running:
+docker ps
+or
+docker-compose ps
+
+
+To stop all containers started by Docker Compose:
+docker-compose down
+
+If you want to remove everything (containers + networks + volumes):
+docker-compose down -v
+
+If you want to see the output logs (useful for debugging):
+docker-compose logs -f
+
+You can open a shell into one of your running services, for example:
+docker exec -it <container_name> bash
+

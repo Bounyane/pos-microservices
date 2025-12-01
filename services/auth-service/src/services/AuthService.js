@@ -1,54 +1,63 @@
-const User = require('../models/User');
+const grpc = require('@grpc/grpc-js');
+const protoLoader = require('@grpc/proto-loader');
+const path = require('path');
 const Session = require('../models/Session');
 const JWTService = require('./JWTService');
+
+const PROTO_PATH = path.join(__dirname, '../../user.proto');
+const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
+  keepCase: true,
+  longs: String,
+  enums: String,
+  defaults: true,
+  oneofs: true,
+});
+const userProto = grpc.loadPackageDefinition(packageDefinition).user;
+const grpcClient = new userProto.UserService(
+  process.env.USER_SERVICE_GRPC_URL || 'localhost:50051',
+  grpc.credentials.createInsecure()
+);
 
 class AuthService {
   // Login user
   async login(credentials) {
     try {
       const { email, password } = credentials;
-      
-      // Find user by email
-      const user = User.findByEmail(email);
-      if (!user) {
-        throw new Error('Invalid credentials');
+      // Call user-service via gRPC
+      const verifyCredentials = () => new Promise((resolve, reject) => {
+        grpcClient.VerifyCredentials({ email, password }, (err, response) => {
+          if (err) return reject(err);
+          resolve(response);
+        });
+      });
+      const result = await verifyCredentials();
+      if (!result.success) {
+        throw new Error(result.error || 'Invalid credentials');
       }
-      
-      // Verify password
-      const isPasswordValid = await User.verifyPassword(user, password);
-      if (!isPasswordValid) {
-        throw new Error('Invalid credentials');
-      }
-      
-      // Update last login
-      User.updateLastLogin(user.uid);
-      
+      // Minimal user info (only userId and email)
+      const user = {
+        uid: result.userId,
+        email,
+        role: result.role,
+        lastLogin: new Date().toISOString()
+      };
       // Generate JWT token
       const token = JWTService.generateToken(user);
-      
       // Store session
       const sessionData = {
         uid: user.uid,
         email: user.email,
         role: user.role,
-        lastLogin: new Date().toISOString(),
+        lastLogin: user.lastLogin,
         isActive: true
       };
-      
       await Session.store(user.uid, sessionData);
-      
       return {
         success: true,
         message: 'Login successful',
         data: {
           token,
-          user: {
-            uid: user.uid,
-            email: user.email,
-            role: user.role,
-            emailVerified: user.emailVerified,
-            lastLogin: user.lastLogin
-          }
+          user
         }
       };
     } catch (error) {
@@ -71,13 +80,10 @@ class AuthService {
   }
 
   // Validate token
-  async validateToken(token) {
+  async getTokenInfo(uid) {
     try {
-      // Verify JWT token
-      const decoded = JWTService.verifyToken(token);
-      
       // Check if session exists and is active
-      const sessionData = await Session.get(decoded.uid);
+      const sessionData = await Session.get(uid);
       
       if (!sessionData || !sessionData.isActive) {
         throw new Error('Session expired or invalid');
@@ -86,9 +92,9 @@ class AuthService {
       return {
         valid: true,
         user: {
-          uid: decoded.uid,
-          email: decoded.email,
-          role: decoded.role
+          uid: sessionData.uid,
+          email: sessionData.email,
+          role: sessionData.role
         }
       };
     } catch (error) {
@@ -100,36 +106,39 @@ class AuthService {
   }
 
   // Refresh token
-  async refreshToken(uid) {
+  async refreshToken(uid, email = null) {
     try {
-      // Get user from database
-      const user = User.findByUID(uid);
-      if (!user) {
+      // No user DB, so just use uid and email
+      if (!uid) {
         throw new Error('User not found');
       }
       
-      // Generate new JWT token
-      const newToken = JWTService.generateToken(user);
+      // Get existing session to get the role
+      const sessionData = await Session.get(uid);
+      if (!sessionData || !sessionData.isActive) {
+        throw new Error('Session expired or invalid');
+      }
       
+      // Generate new JWT token
+      const user = {
+        uid,
+        email: email || sessionData.email,
+        role: sessionData.role,
+      };
+      const newToken = JWTService.generateToken(user);
       // Update session
-      const sessionData = {
+      const updatedSessionData = {
         uid: user.uid,
         email: user.email,
         role: user.role,
         lastRefresh: new Date().toISOString(),
         isActive: true
       };
-      
-      await Session.store(user.uid, sessionData);
-      
+      await Session.store(user.uid, updatedSessionData);
       return {
         success: true,
         token: newToken,
-        user: {
-          uid: user.uid,
-          email: user.email,
-          role: user.role
-        }
+        user
       };
     } catch (error) {
       throw error;

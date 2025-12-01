@@ -52,6 +52,9 @@ const userSchemas = {
   }),
 
   update: Joi.object({
+    id: Joi.string().required().messages({
+    'any.required': 'User ID is required'
+  }),
     firstName: Joi.string()
       .min(2)
       .max(50)
@@ -79,6 +82,9 @@ const userSchemas = {
   }),
 
   manager: Joi.object({
+   id: Joi.string().required().messages({
+    'any.required': 'User ID is required'
+  }),
     storeType: Joi.string()
       .valid('restaurant', 'supermarket', 'cafe', 'bakery', 'pharmacy', 'clothing', 'electronics', 'other')
       .required()

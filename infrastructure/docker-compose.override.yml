@@ -1,15 +1,6 @@
 # docker-compose.override.yml
 
 services:
-  # 🔁 API Gateway Dev Mode
-  api-gateway:
-    volumes:
-      - ../services/api-gateway:/app
-      - node_modules_gateway:/app/node_modules
-    environment:
-      - NODE_ENV=development
-      - DEBUG=*
-    command: npm start
 
   # 🔁 Auth Service Dev Mode
   auth-service:

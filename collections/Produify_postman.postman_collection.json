@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "ea637dd5-8be2-44ca-8e35-f425743aa854",
+		"name": "Produify_postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth_service",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{produify_auth_service}}/login",
+							"host": [
+								"{{produify_auth_service}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{produify_auth_service}}/api/auth/logout",
+							"host": [
+								"{{produify_auth_service}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{produify_auth_service}}/api/auth/validate",
+							"host": [
+								"{{produify_auth_service}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{produify_auth_service}}/api/auth/refresh",
+							"host": [
+								"{{produify_auth_service}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user_service",
+			"item": [
+				{
+					"name": "manager",
+					"item": [
+						{
+							"name": "getManagers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{produify_user_service}}/api/users/managers",
+									"host": [
+										"{{produify_user_service}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"managers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createManagerProfile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"storeType\":\"restaurant\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97/manager",
+									"host": [
+										"{{produify_user_service}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"687c72dcbe6ec9797bc4fd97",
+										"manager"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getManagerProfile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97/manager",
+									"host": [
+										"{{produify_user_service}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"687c72dcbe6ec9797bc4fd97",
+										"manager"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateManagerProfile",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"storeName\":\"Produify store\",\r\n    \"storephone\":\"0689134015\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{produify_user_service}}/api/687c72dcbe6ec9797bc4fd97/manager",
+									"host": [
+										"{{produify_user_service}}"
+									],
+									"path": [
+										"api",
+										"687c72dcbe6ec9797bc4fd97",
+										"manager"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "dealer",
+					"item": [
+						{
+							"name": "getDealerProfile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97/dealer",
+									"host": [
+										"{{produify_user_service}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"687c72dcbe6ec9797bc4fd97",
+										"dealer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateDealerProfile",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97/dealer",
+									"host": [
+										"{{produify_user_service}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"687c72dcbe6ec9797bc4fd97",
+										"dealer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDealers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{produify_user_service}}/api/users/dealers",
+									"host": [
+										"{{produify_user_service}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"dealers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createDealerProfile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"dealerType\": \"individual\",\r\n  \"businessAddress\": {\r\n    \"street\": \"123 Main Street\",\r\n    \"city\": \"Marrakech\",\r\n    \"country\":\"morocco\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97/dealer",
+									"host": [
+										"{{produify_user_service}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"687c72dcbe6ec9797bc4fd97",
+										"dealer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"phone\": \"+1234567890\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"password\": \"securePassword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{produify_user_service}}/api/users/register",
+							"host": [
+								"{{produify_user_service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserbyId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97",
+							"host": [
+								"{{produify_user_service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"687c72dcbe6ec9797bc4fd97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{produify_user_service}}/api/users/email/john.doe@example.com",
+							"host": [
+								"{{produify_user_service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"email",
+								"john.doe@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"abderrahim\",\r\n    \"lastName\": \"bounyane\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97",
+							"host": [
+								"{{produify_user_service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"687c72dcbe6ec9797bc4fd97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97",
+							"host": [
+								"{{produify_user_service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"687c72dcbe6ec9797bc4fd97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{produify_user_service}}",
+							"host": [
+								"{{produify_user_service}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{produify_user_service}}/api/users/687c72dcbe6ec9797bc4fd97/status",
+							"host": [
+								"{{produify_user_service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"687c72dcbe6ec9797bc4fd97",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

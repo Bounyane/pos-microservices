@@ -1,0 +1,10 @@
+FROM openresty/openresty:alpine
+
+# Install lua-resty-http dependency
+RUN apk add --no-cache curl unzip \
+ && curl -L https://github.com/ledgetech/lua-resty-http/archive/refs/heads/master.zip -o resty-http.zip \
+ && unzip resty-http.zip \
+ && mkdir -p /usr/local/openresty/lualib/resty \
+ && cp lua-resty-http-master/lib/resty/http*.lua /usr/local/openresty/lualib/resty/ \
+ && rm -rf resty-http.zip lua-resty-http-master
+

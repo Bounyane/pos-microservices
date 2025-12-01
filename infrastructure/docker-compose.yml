@@ -37,33 +37,21 @@ services:
     restart: unless-stopped
 
   # Application Services
-  api-gateway:
-    build: ../services/api-gateway
-    container_name: pos-api-gateway
+  nginx:
+    build:
+      context: ../services/api-gateway
+      dockerfile: Dockerfile
+    container_name: nginx-proxy
     ports:
-      - "3000:3000"
+      - "80:80"
+    volumes:
+      - ../services/api-gateway/conf:/usr/local/openresty/nginx/conf:ro
+      - ../services/api-gateway/lualib:/usr/local/openresty/custom-lualib 
     depends_on:
       - auth-service
       - user-service
-    environment:
-      - NODE_ENV=development
-      - PORT=3000
-      - JWT_SECRET=test_key
-      - AUTH_SERVICE_URL=http://auth-service:8081
-      - USER_SERVICE_URL=http://user-service:8082
-      - ALLOWED_ORIGINS=true
     networks:
       - pos-network
-    healthcheck:
-      test: ["CMD", "node", "healthcheck.js"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-      start_period: 40s
-    restart: unless-stopped
-    volumes:
-      - ../services/api-gateway:/app
-      - node_modules_gateway:/app/node_modules
 
   auth-service:
     build:   

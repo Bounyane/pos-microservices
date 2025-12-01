@@ -39,15 +39,11 @@ class AuthController {
   }
 
   // Validate token
-  async validateToken(req, res) {
+  async getTokenInfo(req, res) {
     try {
-      const result = await AuthService.validateToken(req.body.token);
+      const result = await AuthService.getTokenInfo(req.user.uid);
       
-      if (result.valid) {
-        res.json(result);
-      } else {
-        res.status(401).json(result);
-      }
+      res.json(result);
     } catch (error) {
       console.error('Token validation error:', error);
       res.status(401).json({ valid: false, error: 'Invalid token' });

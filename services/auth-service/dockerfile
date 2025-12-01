@@ -2,15 +2,17 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY services/auth-service/ /app
 
 RUN npm install
 
-COPY . .
+# Copy shared proto files
+COPY shared/libraries/user.proto /app/user.proto
+
 
 EXPOSE 8081
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=5 \
   CMD node healthcheck.js
 
-CMD ["node", "start"] 
+CMD ["npm", "start"] 

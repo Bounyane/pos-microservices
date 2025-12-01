@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const userRoutes = require('./userRoutes');
+const managerRoutes = require('./managerRoute');
+const dealerRoute = require('./dealerRoute');
+
 const userController = require('../controllers/userController');
 
 // Health check endpoint
@@ -17,9 +20,9 @@ router.get('/health', (req, res) => {
 router.use('/users', userRoutes);
 
 // Manager routes
-router.get('/managers', userController.getManagers);
+router.use('/managers', managerRoutes);
 
 // Dealer routes
-router.get('/dealers', userController.getDealers);
+router.use('/dealers', dealerRoute);
 
 module.exports = router; 
