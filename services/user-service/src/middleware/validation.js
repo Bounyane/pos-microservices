@@ -53,8 +53,8 @@ const userSchemas = {
 
   update: Joi.object({
     id: Joi.string().required().messages({
-    'any.required': 'User ID is required'
-  }),
+      'any.required': 'User ID is required'
+    }),
     firstName: Joi.string()
       .min(2)
       .max(50)
@@ -82,9 +82,9 @@ const userSchemas = {
   }),
 
   manager: Joi.object({
-   id: Joi.string().required().messages({
-    'any.required': 'User ID is required'
-  }),
+    id: Joi.string().required().messages({
+      'any.required': 'User ID is required'
+    }),
     storeType: Joi.string()
       .valid('restaurant', 'supermarket', 'cafe', 'bakery', 'pharmacy', 'clothing', 'electronics', 'other')
       .required()
@@ -92,42 +92,45 @@ const userSchemas = {
         'any.only': 'Store type must be one of: restaurant, supermarket, cafe, bakery, pharmacy, clothing, electronics, other',
         'any.required': 'Store type is required'
       }),
-      storeName: Joi.string()
-      //       .min(2)
-      //       .max(100)
-      //       .required()
-      //       .messages({
-      //         'string.min': 'Store name must be at least 2 characters long',
-      //         'string.max': 'Store name cannot exceed 100 characters',
-      //         'any.required': 'Store name is required'
-      //       }),
-      //     storeAddress: Joi.object({
-      //       street: Joi.string().required(),
-      //       city: Joi.string().required(),
-      //       state: Joi.string().required(),
-      //       zipCode: Joi.string().required(),
-      //       country: Joi.string().default('US')
-      //     }).required(),
-      //     storePhone: Joi.string()
-      //       .pattern(/^\+?[\d\s\-\(\)]+$/)
-      //       .required()
-      //       .messages({
-      //         'string.pattern.base': 'Please provide a valid phone number',
-      //         'any.required': 'Store phone is required'
-      //       }),
-      //     storeEmail: Joi.string()
-      //       .email()
-      //       .required()
-      //       .messages({
-      //         'string.email': 'Please provide a valid email address',
-      //         'any.required': 'Store email is required'
-      //       }),
-      //     businessLicense: Joi.string().required(),
-      //     taxId: Joi.string().required(),
-      //     storeDescription: Joi.string().max(500)
+    storeName: Joi.string()
+    //       .min(2)
+    //       .max(100)
+    //       .required()
+    //       .messages({
+    //         'string.min': 'Store name must be at least 2 characters long',
+    //         'string.max': 'Store name cannot exceed 100 characters',
+    //         'any.required': 'Store name is required'
+    //       }),
+    //     storeAddress: Joi.object({
+    //       street: Joi.string().required(),
+    //       city: Joi.string().required(),
+    //       state: Joi.string().required(),
+    //       zipCode: Joi.string().required(),
+    //       country: Joi.string().default('US')
+    //     }).required(),
+    //     storePhone: Joi.string()
+    //       .pattern(/^\+?[\d\s\-\(\)]+$/)
+    //       .required()
+    //       .messages({
+    //         'string.pattern.base': 'Please provide a valid phone number',
+    //         'any.required': 'Store phone is required'
+    //       }),
+    //     storeEmail: Joi.string()
+    //       .email()
+    //       .required()
+    //       .messages({
+    //         'string.email': 'Please provide a valid email address',
+    //         'any.required': 'Store email is required'
+    //       }),
+    //     businessLicense: Joi.string().required(),
+    //     taxId: Joi.string().required(),
+    //     storeDescription: Joi.string().max(500)
   }),
 
   dealer: Joi.object({
+    id: Joi.string().required().messages({
+      'any.required': 'User ID is required'
+    }),
     dealerType: Joi.string()
       .valid('individual', 'company')
       .required()
@@ -145,36 +148,36 @@ const userSchemas = {
       country: Joi.string().required(),
     }).required(),
     // companyRegistrationNumber: Joi.when('dealerType', {
-  //     is: 'company',
-  //     then: Joi.string().required(),
-  //     otherwise: Joi.forbidden()
-  //   }),
-  //   businessPhone: Joi.string()
-  //     .pattern(/^\+?[\d\s\-\(\)]+$/)
-  //     .required()
-  //     .messages({
-  //       'string.pattern.base': 'Please provide a valid phone number',
-  //       'any.required': 'Business phone is required'
-  //     }),
-  //   businessEmail: Joi.string()
-  //     .email()
-  //     .required()
-  //     .messages({
-  //       'string.email': 'Please provide a valid email address',
-  //       'any.required': 'Business email is required'
-  //     }),
-  //   taxId: Joi.string().required(),
-  //   businessLicense: Joi.string().required(),
-  //   businessDescription: Joi.string().max(500),
-  //   specialties: Joi.array().items(Joi.string()),
-  //   serviceAreas: Joi.array().items(
-  //     Joi.object({
-  //       city: Joi.string().required(),
-  //       state: Joi.string().required(),
-  //       country: Joi.string().default('US')
-  //     })
-  //   ),
-  //   yearsInBusiness: Joi.number().min(0).max(100)
+    //     is: 'company',
+    //     then: Joi.string().required(),
+    //     otherwise: Joi.forbidden()
+    //   }),
+    //   businessPhone: Joi.string()
+    //     .pattern(/^\+?[\d\s\-\(\)]+$/)
+    //     .required()
+    //     .messages({
+    //       'string.pattern.base': 'Please provide a valid phone number',
+    //       'any.required': 'Business phone is required'
+    //     }),
+    //   businessEmail: Joi.string()
+    //     .email()
+    //     .required()
+    //     .messages({
+    //       'string.email': 'Please provide a valid email address',
+    //       'any.required': 'Business email is required'
+    //     }),
+    //   taxId: Joi.string().required(),
+    //   businessLicense: Joi.string().required(),
+    //   businessDescription: Joi.string().max(500),
+    //   specialties: Joi.array().items(Joi.string()),
+    //   serviceAreas: Joi.array().items(
+    //     Joi.object({
+    //       city: Joi.string().required(),
+    //       state: Joi.string().required(),
+    //       country: Joi.string().default('US')
+    //     })
+    //   ),
+    //   yearsInBusiness: Joi.number().min(0).max(100)
   })
 };
 
@@ -191,7 +194,7 @@ const validate = (schema) => {
         field: detail.path.join('.'),
         message: detail.message
       }));
-      
+
       return ApiResponse.validationError(res, errors);
     }
 

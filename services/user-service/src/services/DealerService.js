@@ -16,7 +16,7 @@ class DealerService {
         throw new Error('User not found');
       }
 
-       //update user to dealer role
+      //update user to dealer role
       user.role = 'DEALER';
       await user.save();
 
@@ -124,5 +124,5 @@ class DealerService {
 
 }
 
-module.exports = new DealerService(); 
+module.exports = new DealerService();
 

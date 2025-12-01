@@ -10,7 +10,7 @@ class DealerController {
   async createDealerProfile(req, res) {
     try {
       const { id, ...dealerData } = req.body;
-      const dealer = await UserService.createDealerProfile(id, dealerData);
+      const dealer = await DealerService.createDealerProfile(id, dealerData);
 
       return ApiResponse.created(res, dealer, 'Dealer profile created successfully');
     } catch (error) {
@@ -41,7 +41,7 @@ class DealerController {
   async getDealerProfile(req, res) {
     try {
       const { id } = req.params;
-      const dealer = await UserService.getDealerProfile(id);
+      const dealer = await DealerService.getDealerProfile(id);
 
       return ApiResponse.success(res, dealer, 'Dealer profile retrieved successfully');
     } catch (error) {
@@ -63,9 +63,8 @@ class DealerController {
    */
   async updateDealerProfile(req, res) {
     try {
-      const { id } = req.params;
-      const updateData = req.body;
-      const dealer = await UserService.updateDealerProfile(id, updateData);
+      const { id, ...updateData } = req.body;
+      const dealer = await DealerService.updateDealerProfile(id, updateData);
 
       return ApiResponse.success(res, dealer, 'Dealer profile updated successfully');
     } catch (error) {
@@ -101,7 +100,7 @@ class DealerController {
       if (city) filters.city = city;
       if (specialty) filters.specialty = specialty;
 
-      const result = await UserService.getDealers(filters, parseInt(page), parseInt(limit));
+      const result = await DealerService.getDealers(filters, parseInt(page), parseInt(limit));
 
       return ApiResponse.success(res, result, 'Dealers retrieved successfully');
     } catch (error) {
