@@ -17,9 +17,9 @@ services:
     restart: unless-stopped
 
   # Database Services
-  mongodb:
+  userMongodb:
     image: mongo:7
-    container_name: pos-mongodb
+    container_name: pos-user-mongodb
     ports:
       - "27017:27017"
     volumes:
@@ -50,6 +50,7 @@ services:
     depends_on:
       - auth-service
       - user-service
+      - catalogue-service
     networks:
       - pos-network
 
@@ -92,12 +93,12 @@ services:
       - "8082:8082"
       - "50051:50051"
     depends_on:
-      - mongodb
+      - userMongodb
     environment:
       - NODE_ENV=development
       - PORT=8082
       - GRPC_PORT=50051
-      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@mongodb:27017/pos_users?authSource=admin
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@userMongodb:27017/pos_users?authSource=admin
       - JWT_SECRET=test_key
       - ALLOWED_ORIGINS=true
     networks:
@@ -114,12 +115,54 @@ services:
       - ../shared/libraries/user.proto:/app/user.proto
       - node_modules_user:/app/node_modules
 
+  catalogue-service:
+    build: 
+      context: ..
+      dockerfile: ./services/catalogue-service/Dockerfile
+    container_name: pos-catalogue-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - catalogue_mongodb
+    environment:
+      - NODE_ENV=development
+      - PORT=8083
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@catalogue_mongodb:27017/pos_catalogue?authSource=admin
+      - ALLOWED_ORIGINS=true
+    networks:
+      - pos-network
+    restart: unless-stopped
+    volumes:
+      - ../services/catalogue-service:/app
+      - node_modules_catalogue:/app/node_modules
+
+  catalogue_mongodb:
+    image: mongo:7
+    container_name: pos-catalogue-mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - catalogue_mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
 volumes:
   redis_data:
   mongodb_data:
+  catalogue_mongodb_data:
   node_modules_gateway:
   node_modules_auth:
   node_modules_user:
+  node_modules_catalogue:
 
 networks:
   pos-network:

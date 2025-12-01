@@ -48,12 +48,19 @@ services:
     profiles:
       - dev
 
-  # 🔁 MongoDB Dev
-  mongodb:
+  # 🔁 User MongoDB Dev
+  userMongodb:
     ports:
       - "27017:27017"
     volumes:
       - mongodb_dev_data:/data/db
+
+  # 🔁 Catalogue MongoDB Dev
+  catalogue_mongodb:
+    ports:
+      - "27018:27017"
+    volumes:
+      - catalogue_mongodb_dev_data:/data/db
 
 volumes:
   node_modules_gateway:
@@ -61,3 +68,4 @@ volumes:
   node_modules_user:
   redis_dev_data:
   mongodb_dev_data:
+  catalogue_mongodb_dev_data:
