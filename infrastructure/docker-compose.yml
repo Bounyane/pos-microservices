@@ -127,7 +127,7 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=8083
-      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@catalogue_mongodb:27017/pos_catalogue?authSource=admin
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@catalogue_mongodb:27018/pos_catalogue?authSource=admin
       - ALLOWED_ORIGINS=true
     networks:
       - pos-network
@@ -140,9 +140,50 @@ services:
     image: mongo:7
     container_name: pos-catalogue-mongodb
     ports:
-      - "27018:27017"
+      - "27018:27018"
     volumes:
       - catalogue_mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+
+  order-service:
+    build: 
+      context: ..
+      dockerfile: ./services/order-service/Dockerfile
+    container_name: pos-order-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - order_mongodb
+    environment:
+      - NODE_ENV=development
+      - PORT=8084
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@order_mongodb:27019/pos_order?authSource=admin
+      - ALLOWED_ORIGINS=true
+    networks:
+      - pos-network
+    restart: unless-stopped
+    volumes:
+      - ../services/order-service:/app
+      - node_modules_order:/app/node_modules
+
+  order_mongodb:
+    image: mongo:7
+    container_name: pos-order-mongodb
+    ports:
+      - "27019:27019"
+    volumes:
+      - order_mongodb_data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
@@ -163,6 +204,7 @@ volumes:
   node_modules_auth:
   node_modules_user:
   node_modules_catalogue:
+
 
 networks:
   pos-network:

@@ -3,9 +3,9 @@ const router = express.Router();
 const catalogueController = require('../controllers/catalogueController');
 
 // Add category (POST) - Direct insert
-router.post('/syncProduct', catalogueController.syncProduct);
+router.post('/asyncProduct', catalogueController.asyncProduct);
 
 // Add product (POST) - Direct insert
-router.post('/syncCategories', catalogueController.syncCategories);
+router.post('/asyncCategories', catalogueController.asyncCategories);
 
 module.exports = router;

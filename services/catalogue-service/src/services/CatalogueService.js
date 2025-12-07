@@ -6,7 +6,7 @@ class CatalogueService {
     /**
      * Add a new category directly to database
      */
-    async syncCategories(data) {
+    async asyncCategories(data) {
         const { managerId, name, activated } = data;
 
         const category = await Category.create({
@@ -22,7 +22,7 @@ class CatalogueService {
     /**
      * Add a new product directly to database
      */
-    async syncProducts(data) {
+    async asyncProducts(data) {
         const {
             managerId,
             categoryId,
@@ -36,8 +36,7 @@ class CatalogueService {
             activated
         } = data;
 
-        // Create Product profile
-        const dealer = new Product({
+        const product = await Product.create({
             managerId,
             categoryId,
             name,
@@ -49,13 +48,9 @@ class CatalogueService {
             quantity: quantity || 0,
             activated: activated !== undefined ? activated : true
         });
-        await dealer.save();
-
 
         logger.info(`Product created: ${name}`);
-        return {
-            'success': true
-        };
+        return product;
     }
 }
 

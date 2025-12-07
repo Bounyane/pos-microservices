@@ -23,6 +23,15 @@ services:
       - NODE_ENV=development
       - DEBUG=*
     command: npm start
+  
+  order-service:
+    volumes:
+      - ../services/order-service:/app
+      - node_modules_order:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - DEBUG=*
+    command: npm start
 
   # 🔁 Redis Dev + Redis Commander
   redis:
@@ -58,14 +67,23 @@ services:
   # 🔁 Catalogue MongoDB Dev
   catalogue_mongodb:
     ports:
-      - "27018:27017"
+      - "27018:27018"
     volumes:
       - catalogue_mongodb_dev_data:/data/db
+
+  # 🔁 Order MongoDB Dev
+  order_mongodb:
+    ports:
+      - "27019:27019"
+    volumes:
+      - order_mongodb_dev_data:/data/db
 
 volumes:
   node_modules_gateway:
   node_modules_auth:
   node_modules_user:
+  node_modules_order:
   redis_dev_data:
   mongodb_dev_data:
   catalogue_mongodb_dev_data:
+  order_mongodb_dev_data:

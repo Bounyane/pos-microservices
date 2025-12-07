@@ -1,21 +1,22 @@
-const catalogueService = require('../services/CatalogueService');
+const orderService = require('../services/orderService');
 const logger = require('../utils/logger');
 
 /**
- * Add Category - Direct insert to database
+ * Add order - Direct insert to database
  */
-exports.asyncProduct = async (req, res) => {
+exports.asyncOrder = async (req, res) => {
     try {
-        const { managerId, name } = req.body;
+        console.log('test test')
+        const { managerId, numberOrder, waiterId, statusOrder } = req.body;
 
-        if (!managerId || !name) {
+        if (!managerId || !numberOrder || !waiterId || !statusOrder) {
             return res.status(400).json({
                 success: false,
-                message: 'ManagerId and Name are required'
+                message: 'ManagerId and numberOrder , waiterId ,statusOrder are required'
             });
         }
 
-        const category = await catalogueService.asyncProducts(req.body);
+        const category = await orderService.asyncOrder(req.body);
         res.status(201).json({ success: true, data: category });
     } catch (error) {
         logger.error(`Error adding category: ${error.message}`);
@@ -28,20 +29,20 @@ exports.asyncProduct = async (req, res) => {
 };
 
 /**
- * Add Product - Direct insert to database
+ * Add orderItem - Direct insert to database
  */
-exports.asyncCategories = async (req, res) => {
+exports.asyncOrderItem = async (req, res) => {
     try {
-        const { managerId, name } = req.body;
+        const { orderId, productId, quantity } = req.body;
 
-        if (!managerId || !name) {
+        if (!orderId || !productId, !quantity) {
             return res.status(400).json({
                 success: false,
                 message: 'Missing required fields: managerId, categoryId, name, price'
             });
         }
 
-        const product = await catalogueService.asyncCategories(req.body);
+        const product = await orderService.asyncOrderItem(req.body);
         res.status(201).json({ success: true, data: product });
     } catch (error) {
         logger.error(`Error adding product: ${error.message}`);

@@ -21186,3 +21186,139 @@
 {"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:32:16"}
 {"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:32:47"}
 {"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:33:17"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:33:47"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:34:17"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:34:48"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:35:18"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:35:48"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:36:18"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:36:49"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:37:19"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:37:50"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:38:20"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2025-12-01 21:38:43"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2025-12-01 21:39:04"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2025-12-01 21:39:05"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:39:05"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:39:35"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:40:05"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:40:35"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:41:06"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:41:36"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:42:06"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:42:36"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-01 21:43:07"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2025-12-01 21:43:07"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2025-12-07 04:00:16"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2025-12-07 04:00:16"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:00:18"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:00:49"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:01:19"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:01:49"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:02:20"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:02:50"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:03:20"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:03:50"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:04:21"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:04:51"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:05:22"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:05:52"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:06:22"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:06:53"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:07:23"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:07:53"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:08:24"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:08:54"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:09:25"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:09:55"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:10:25"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:10:55"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:11:26"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:11:56"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:12:26"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:12:57"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:13:27"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:13:57"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:14:28"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2025-12-07 04:14:29"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2025-12-07 04:14:57"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2025-12-07 04:14:58"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:15:01"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:15:32"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:16:02"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:16:32"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:17:03"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:17:33"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:18:03"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:18:34"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:19:04"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:19:35"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:20:05"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:20:36"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:21:06"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:21:37"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:22:07"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2025-12-07 04:22:24"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2025-12-07 04:22:51"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2025-12-07 04:22:52"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:22:56"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:23:27"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:23:57"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:24:27"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2025-12-07 04:24:30"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2025-12-07 04:25:26"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:25:27"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2025-12-07 04:25:27"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:25:57"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:26:28"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:26:58"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:27:29"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:27:59"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:28:29"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:29:00"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:29:30"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:30:00"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:30:31"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:31:01"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:31:31"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:32:02"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:32:32"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:33:03"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:33:33"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:34:04"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:34:34"}
+{"ip":"::ffff:172.18.0.10","level":"info","message":"GET /api/users","service":"user-service","timestamp":"2025-12-07 04:34:45","userAgent":"PostmanRuntime/7.28.3"}
+{"ip":"::ffff:172.18.0.10","level":"info","message":"GET /api/users/688ba5e9721da665225c1344","service":"user-service","timestamp":"2025-12-07 04:34:56","userAgent":"PostmanRuntime/7.28.3"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:35:04"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:35:35"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:36:05"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:36:35"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:37:06"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:37:36"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:38:06"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:38:36"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:39:07"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:39:37"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:40:08"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2025-12-07 04:40:35"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2025-12-07 04:41:03"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2025-12-07 04:41:03"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:41:06"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:41:37"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:42:08"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:42:38"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:43:08"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:43:39"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:44:09"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:44:39"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:45:10"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:45:41"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:46:11"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:46:42"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:47:12"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:47:42"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:48:12"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:48:43"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:49:13"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2025-12-07 04:49:43"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2025-12-07 04:50:06"}

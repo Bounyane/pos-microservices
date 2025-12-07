@@ -1,18 +1,19 @@
 const mongoose = require('mongoose');
 
-const categorySchema = new mongoose.Schema({
-    managerId: {
+const orderItemSchema = new mongoose.Schema({
+    orderId: {
         type: String,
         required: true
     },
-    name: {
+    productId: {
+        type: String,
+        required: true
+
+    },
+    quantity: {
         type: String,
         required: true
     },
-    activated: {
-        type: Boolean,
-        default: true
-    }
 }, {
     timestamps: {
         createdAt: 'created_at',
@@ -20,4 +21,4 @@ const categorySchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Category', categorySchema);
+module.exports = mongoose.model('OrderItem', orderItemSchema);
