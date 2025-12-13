@@ -1,5 +1,6 @@
 const orderService = require('../services/orderService');
 const logger = require('../utils/logger');
+const messageBroker = require('../services/MessageBroker');
 
 /**
  * Add order - Direct insert to database
@@ -17,6 +18,7 @@ exports.asyncOrder = async (req, res) => {
         }
 
         const order = await orderService.asyncOrder(req.body);
+        await messageBroker.publishEvent('order_events', 'order.created', order);
         res.status(201).json({ success: true, data: order });
     } catch (error) {
         logger.error(`Error adding order: ${error.message}`);
@@ -43,6 +45,7 @@ exports.asyncOrderItem = async (req, res) => {
         }
 
         const order = await orderService.asyncOrderItem(req.body);
+        await messageBroker.publishEvent('order_events', 'orderItem.created', order);
         res.status(201).json({ success: true, data: order });
     } catch (error) {
         logger.error(`Error adding orderItem: ${error.message}`);
