@@ -16,10 +16,10 @@ exports.asyncOrder = async (req, res) => {
             });
         }
 
-        const category = await orderService.asyncOrder(req.body);
-        res.status(201).json({ success: true, data: category });
+        const order = await orderService.asyncOrder(req.body);
+        res.status(201).json({ success: true, data: order });
     } catch (error) {
-        logger.error(`Error adding category: ${error.message}`);
+        logger.error(`Error adding order: ${error.message}`);
         res.status(500).json({
             success: false,
             message: 'Server Error',
@@ -42,10 +42,10 @@ exports.asyncOrderItem = async (req, res) => {
             });
         }
 
-        const product = await orderService.asyncOrderItem(req.body);
-        res.status(201).json({ success: true, data: product });
+        const order = await orderService.asyncOrderItem(req.body);
+        res.status(201).json({ success: true, data: order });
     } catch (error) {
-        logger.error(`Error adding product: ${error.message}`);
+        logger.error(`Error adding orderItem: ${error.message}`);
         res.status(500).json({
             success: false,
             message: 'Server Error',

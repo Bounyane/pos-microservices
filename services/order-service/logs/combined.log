@@ -144,3 +144,74 @@
 {"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:05:39"}
 {"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:05:43"}
 {"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:06:13"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:06:17"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:06:47"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:06:51"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:07:21"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:07:24"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:07:54"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:07:56"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:08:26"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:08:30"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:09:00"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:09:02"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:09:32"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:09:35"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:10:05"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:10:08"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:10:38"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:10:40"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:11:10"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:11:14"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:11:44"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:11:47"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:12:17"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:12:19"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:12:49"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:12:51"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:13:21"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:13:24"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:13:54"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:13:57"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:14:27"}
+{"level":"info","message":"Catalogue service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:14:30"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:15:00"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:15:03"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:15:33"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:15:35"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:16:05"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:16:09"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:16:39"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:16:42"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:17:12"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:17:15"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:17:45"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:17:48"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27019","service":"catalogue-service","timestamp":"2025-12-07 05:18:18"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:18:22"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:20:14"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2025-12-07 05:20:14"}
+{"level":"error","message":"Error adding category: name is not defined","service":"catalogue-service","timestamp":"2025-12-07 05:21:15"}
+{"level":"error","message":"Error adding product: name is not defined","service":"catalogue-service","timestamp":"2025-12-07 05:24:13"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:26:37"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2025-12-07 05:26:37"}
+{"level":"error","message":"Error adding product: name is not defined","service":"catalogue-service","timestamp":"2025-12-07 05:29:00"}
+{"level":"error","message":"Error adding product: name is not defined","service":"catalogue-service","timestamp":"2025-12-07 05:30:21"}
+{"level":"error","message":"Error adding category: name is not defined","service":"catalogue-service","timestamp":"2025-12-07 05:30:34"}
+{"level":"error","message":"Error adding category: name is not defined","service":"catalogue-service","timestamp":"2025-12-07 05:31:29"}
+{"level":"error","message":"Error adding category: name is not defined","service":"catalogue-service","timestamp":"2025-12-07 05:31:49"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:35:33"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2025-12-07 05:35:33"}
+{"level":"info","message":"order created: 6935123a2c996a4d766631d6","service":"catalogue-service","timestamp":"2025-12-07 05:35:54"}
+{"level":"error","message":"Error adding orderItem: order is not defined","service":"catalogue-service","timestamp":"2025-12-07 05:36:00"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:37:10"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2025-12-07 05:37:10"}
+{"level":"info","message":"orderItemSaved created: 6935129176b96d3599c32d9f","service":"catalogue-service","timestamp":"2025-12-07 05:37:21"}
+{"level":"info","message":"order created: 6935129576b96d3599c32da1","service":"catalogue-service","timestamp":"2025-12-07 05:37:25"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:41:01"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2025-12-07 05:41:01"}
+{"level":"info","message":"order created: 6935137972b23f44da9d4e36","service":"catalogue-service","timestamp":"2025-12-07 05:41:13"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:42:55"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2025-12-07 05:42:55"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2025-12-07 05:45:54"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2025-12-07 05:45:54"}

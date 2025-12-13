@@ -10,3 +10,10 @@
 {"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.5:27018","service":"catalogue-service","timestamp":"2025-12-07 04:25:49"}
 {"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.5:27018","service":"catalogue-service","timestamp":"2025-12-07 04:41:32"}
 {"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.3:27018","service":"catalogue-service","timestamp":"2025-12-07 04:51:14"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27018","service":"catalogue-service","timestamp":"2025-12-07 05:20:46"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27018","service":"catalogue-service","timestamp":"2025-12-07 05:27:07"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.2:27018","service":"catalogue-service","timestamp":"2025-12-07 05:36:03"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.3:27018","service":"catalogue-service","timestamp":"2025-12-07 05:37:43"}
+{"level":"error","message":"Error adding category: Operation `products.insertOne()` buffering timed out after 10000ms","service":"catalogue-service","timestamp":"2025-12-07 05:41:28"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27018","service":"catalogue-service","timestamp":"2025-12-07 05:41:31"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.4:27018","service":"catalogue-service","timestamp":"2025-12-07 05:42:06"}

@@ -1,5 +1,5 @@
-const order = require('../models/order');
-const orderItem = require('../models/order_items');
+const Order = require('../models/order');
+const OrderItem = require('../models/order_items');
 const logger = require('../utils/logger');
 
 class OrderService {
@@ -9,16 +9,15 @@ class OrderService {
     async asyncOrder(data) {
         const { managerId, numberOrder, waiterId, statusOrder } = data;
 
-        const category = await order.create({
+        const order = await Order.create({
             managerId,
             numberOrder,
             waiterId,
-            statusOrder,
             statusOrder: statusOrder !== undefined ? statusOrder : true
         });
 
-        logger.info(`order created: ${name}`);
-        return category;
+        logger.info(`order created: ${order._id}`);
+        return order;
     }
 
     /**
@@ -29,12 +28,12 @@ class OrderService {
             orderId, productId, quantity
         } = data;
 
-        const product = await orderItem.create({
+        const order = await OrderItem.create({
             orderId, productId, quantity
         });
 
-        logger.info(`orderItemSaved created: ${name}`);
-        return product;
+        logger.info(`orderItemSaved created: ${order._id}`);
+        return order;
     }
 }
 

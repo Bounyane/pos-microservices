@@ -6,10 +6,10 @@ require('dotenv').config();
 // Connect to Database
 connectDB();
 
-const PORT = process.env.PORT || 8083;
+const PORT = process.env.PORT || 8084;
 
 const server = app.listen(PORT, () => {
-    logger.info(`Catalogue service running on port ${PORT}`);
+    logger.info(`Order service running on port ${PORT}`);
 });
 
 // Handle server errors
