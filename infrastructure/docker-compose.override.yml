@@ -42,6 +42,16 @@ services:
       - DEBUG=*
     command: npm start
 
+  # 🔁 Analytic Service Dev Mode
+  analytic-service:
+    volumes:
+      - ../services/analytic-service:/app
+      - node_modules_analytic:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - DEBUG=*
+    command: npm start
+
   # 🔁 Redis Dev + Redis Commander
   redis:
     volumes:
@@ -87,13 +97,22 @@ services:
     volumes:
       - order_mongodb_dev_data:/data/db
 
+  # 🔁 Analytic MongoDB Dev
+  analytic_mongodb:
+    ports:
+      - "27020:27017"
+    volumes:
+      - analytic_mongodb_dev_data:/data/db
+
 volumes:
   node_modules_gateway:
   node_modules_auth:
   node_modules_user:
   node_modules_order:
   node_modules_catalogue:
+  node_modules_analytic:
   redis_dev_data:
   mongodb_dev_data:
   catalogue_mongodb_dev_data:
   order_mongodb_dev_data:
+  analytic_mongodb_dev_data:

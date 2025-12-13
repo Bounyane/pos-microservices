@@ -16,6 +16,21 @@ services:
       retries: 5
     restart: unless-stopped
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: pos-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
   # Database Services
   userMongodb:
     image: mongo:7
@@ -51,6 +66,8 @@ services:
       - auth-service
       - user-service
       - catalogue-service
+      - order-service
+      - analytic-service
     networks:
       - pos-network
 
@@ -124,10 +141,12 @@ services:
       - "8083:8083"
     depends_on:
       - catalogue_mongodb
+      - rabbitmq
     environment:
       - NODE_ENV=development
       - PORT=8083
       - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@catalogue_mongodb:27017/pos_catalogue?authSource=admin
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
       - ALLOWED_ORIGINS=true
     networks:
       - pos-network
@@ -165,10 +184,12 @@ services:
       - "8084:8084"
     depends_on:
       - order_mongodb
+      - rabbitmq
     environment:
       - NODE_ENV=development
       - PORT=8084
       - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@order_mongodb:27017/pos_order?authSource=admin
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
       - ALLOWED_ORIGINS=true
     networks:
       - pos-network
@@ -196,14 +217,60 @@ services:
       retries: 5
     restart: unless-stopped
 
+  analytic-service:
+    build:
+      context: ..
+      dockerfile: ./services/analytic-service/Dockerfile
+    container_name: pos-analytic-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - analytic_mongodb
+      - rabbitmq
+    environment:
+      - NODE_ENV=development
+      - PORT=8085
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@analytic_mongodb:27017/pos_analytic?authSource=admin
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
+      - LOG_LEVEL=info
+    networks:
+      - pos-network
+    restart: unless-stopped
+    volumes:
+      - ../services/analytic-service:/app
+      - node_modules_analytic:/app/node_modules
+
+  analytic_mongodb:
+    image: mongo:7
+    container_name: pos-analytic-mongodb
+    ports:
+      - "27020:27017"
+    volumes:
+      - analytic_mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
 volumes:
   redis_data:
   mongodb_data:
   catalogue_mongodb_data:
+  order_mongodb_data:
+  analytic_mongodb_data:
   node_modules_gateway:
   node_modules_auth:
   node_modules_user:
   node_modules_catalogue:
+  node_modules_order:
+  node_modules_analytic:
 
 
 networks:
