@@ -1,5 +1,10 @@
+version: "3.9"
+
 services:
-  # Infrastructure Services
+
+  #################################################
+  # Tools / Infrastructure Services
+  #################################################
   redis:
     image: redis:7-alpine
     container_name: pos-redis
@@ -31,7 +36,9 @@ services:
       retries: 5
     restart: unless-stopped
 
+  #################################################
   # Database Services
+  #################################################
   userMongodb:
     image: mongo:7
     container_name: pos-user-mongodb
@@ -51,7 +58,66 @@ services:
       retries: 5
     restart: unless-stopped
 
+  catalogue_mongodb:
+    image: mongo:7
+    container_name: pos-catalogue-mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - catalogue_mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  order_mongodb:
+    image: mongo:7
+    container_name: pos-order-mongodb
+    ports:
+      - "27019:27017"
+    volumes:
+      - order_mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  analytic_mongodb:
+    image: mongo:7
+    container_name: pos-analytic-mongodb
+    ports:
+      - "27020:27017"
+    volumes:
+      - analytic_mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  #################################################
   # Application Services
+  #################################################
   nginx:
     build:
       context: ../services/api-gateway
@@ -61,7 +127,7 @@ services:
       - "80:80"
     volumes:
       - ../services/api-gateway/conf:/usr/local/openresty/nginx/conf:ro
-      - ../services/api-gateway/lualib:/usr/local/openresty/custom-lualib 
+      - ../services/api-gateway/lualib:/usr/local/openresty/custom-lualib
     depends_on:
       - auth-service
       - user-service
@@ -145,7 +211,7 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=8083
-      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@catalogue_mongodb:27017/pos_catalogue?authSource=admin
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@catalogue_mongodb:27018/pos_catalogue?authSource=admin
       - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
       - ALLOWED_ORIGINS=true
     networks:
@@ -154,26 +220,6 @@ services:
     volumes:
       - ../services/catalogue-service:/app
       - node_modules_catalogue:/app/node_modules
-
-  catalogue_mongodb:
-    image: mongo:7
-    container_name: pos-catalogue-mongodb
-    ports:
-      - "27018:27017"
-    volumes:
-      - catalogue_mongodb_data:/data/db
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
-    networks:
-      - pos-network
-    healthcheck:
-      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-    restart: unless-stopped
-
 
   order-service:
     build: 
@@ -188,7 +234,7 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=8084
-      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@order_mongodb:27017/pos_order?authSource=admin
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@order_mongodb:27019/pos_order?authSource=admin
       - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
       - ALLOWED_ORIGINS=true
     networks:
@@ -197,25 +243,6 @@ services:
     volumes:
       - ../services/order-service:/app
       - node_modules_order:/app/node_modules
-
-  order_mongodb:
-    image: mongo:7
-    container_name: pos-order-mongodb
-    ports:
-      - "27019:27017"
-    volumes:
-      - order_mongodb_data:/data/db
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
-    networks:
-      - pos-network
-    healthcheck:
-      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-    restart: unless-stopped
 
   analytic-service:
     build:
@@ -230,7 +257,7 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=8085
-      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@analytic_mongodb:27017/pos_analytic?authSource=admin
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@analytic_mongodb:27020/pos_analytic?authSource=admin
       - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
       - LOG_LEVEL=info
     networks:
@@ -240,25 +267,9 @@ services:
       - ../services/analytic-service:/app
       - node_modules_analytic:/app/node_modules
 
-  analytic_mongodb:
-    image: mongo:7
-    container_name: pos-analytic-mongodb
-    ports:
-      - "27020:27017"
-    volumes:
-      - analytic_mongodb_data:/data/db
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
-    networks:
-      - pos-network
-    healthcheck:
-      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-    restart: unless-stopped
-
+#################################################
+# Volumes
+#################################################
 volumes:
   redis_data:
   mongodb_data:
@@ -272,7 +283,9 @@ volumes:
   node_modules_order:
   node_modules_analytic:
 
-
+#################################################
+# Networks
+#################################################
 networks:
   pos-network:
     driver: bridge
