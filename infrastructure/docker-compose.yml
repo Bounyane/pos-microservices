@@ -62,7 +62,7 @@ services:
     image: mongo:7
     container_name: pos-catalogue-mongodb
     ports:
-      - "27018:27017"
+      - "27018:27018"
     volumes:
       - catalogue_mongodb_data:/data/db
     environment:
@@ -81,7 +81,7 @@ services:
     image: mongo:7
     container_name: pos-order-mongodb
     ports:
-      - "27019:27017"
+      - "27019:27019"
     volumes:
       - order_mongodb_data:/data/db
     environment:
@@ -100,7 +100,7 @@ services:
     image: mongo:7
     container_name: pos-analytic-mongodb
     ports:
-      - "27020:27017"
+      - "27020:27020"
     volumes:
       - analytic_mongodb_data:/data/db
     environment:

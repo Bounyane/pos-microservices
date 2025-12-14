@@ -2,6 +2,10 @@
 
 services:
 
+  ############################
+  #        Services          #
+  ############################
+
   # 🔁 Auth Service Dev Mode
   auth-service:
     volumes:
@@ -23,7 +27,8 @@ services:
       - NODE_ENV=development
       - DEBUG=*
     command: npm start
-  
+
+  # 🔁 Order Service Dev Mode
   order-service:
     volumes:
       - ../services/order-service:/app
@@ -33,6 +38,7 @@ services:
       - DEBUG=*
     command: npm start
 
+  # 🔁 Catalogue Service Dev Mode
   catalogue-service:
     volumes:
       - ../services/catalogue-service:/app
@@ -52,7 +58,45 @@ services:
       - DEBUG=*
     command: npm start
 
-  # 🔁 Redis Dev + Redis Commander
+
+  ############################
+  #        Databases         #
+  ############################
+
+  # 🔁 User MongoDB Dev
+  userMongodb:
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_dev_data:/data/db
+
+  # 🔁 Catalogue MongoDB Dev
+  catalogue_mongodb:
+    ports:
+      - "27018:27018"
+    volumes:
+      - catalogue_mongodb_dev_data:/data/db
+
+  # 🔁 Order MongoDB Dev
+  order_mongodb:
+    ports:
+      - "27019:27019"
+    volumes:
+      - order_mongodb_dev_data:/data/db
+
+  # 🔁 Analytic MongoDB Dev
+  analytic_mongodb:
+    ports:
+      - "27020:27020"
+    volumes:
+      - analytic_mongodb_dev_data:/data/db
+
+
+  ############################
+  #       Other Tools        #
+  ############################
+
+  # 🔁 Redis Dev
   redis:
     volumes:
       - redis_dev_data:/data
@@ -61,6 +105,7 @@ services:
     labels:
       - "traefik.enable=true"
 
+  # 🔁 Redis Commander
   redis-commander:
     image: rediscommander/redis-commander:latest
     container_name: pos-redis-commander
@@ -76,33 +121,10 @@ services:
     profiles:
       - dev
 
-  # 🔁 User MongoDB Dev
-  userMongodb:
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodb_dev_data:/data/db
 
-  # 🔁 Catalogue MongoDB Dev
-  catalogue_mongodb:
-    ports:
-      - "27018:27017"
-    volumes:
-      - catalogue_mongodb_dev_data:/data/db
-
-  # 🔁 Order MongoDB Dev
-  order_mongodb:
-    ports:
-      - "27019:27017"
-    volumes:
-      - order_mongodb_dev_data:/data/db
-
-  # 🔁 Analytic MongoDB Dev
-  analytic_mongodb:
-    ports:
-      - "27020:27017"
-    volumes:
-      - analytic_mongodb_dev_data:/data/db
+############################
+#          Volumes         #
+############################
 
 volumes:
   node_modules_gateway:
