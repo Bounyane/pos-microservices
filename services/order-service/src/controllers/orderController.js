@@ -7,7 +7,6 @@ const messageBroker = require('../services/MessageBroker');
  */
 exports.asyncOrder = async (req, res) => {
     try {
-        console.log('test test')
         const { managerId, numberOrder, waiterId, statusOrder } = req.body;
 
         if (!managerId || !numberOrder || !waiterId || !statusOrder) {

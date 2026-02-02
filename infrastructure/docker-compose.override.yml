@@ -76,6 +76,7 @@ services:
       - "27018:27018"
     volumes:
       - catalogue_mongodb_dev_data:/data/db
+    command: ["mongod", "--port", "27018", "--bind_ip_all"]
 
   # 🔁 Order MongoDB Dev
   order_mongodb:
@@ -83,6 +84,7 @@ services:
       - "27019:27019"
     volumes:
       - order_mongodb_dev_data:/data/db
+    command: ["mongod", "--port", "27019", "--bind_ip_all"]
 
   # 🔁 Analytic MongoDB Dev
   analytic_mongodb:
@@ -90,6 +92,7 @@ services:
       - "27020:27020"
     volumes:
       - analytic_mongodb_dev_data:/data/db
+    command: ["mongod", "--port", "27020", "--bind_ip_all"]
 
 
   ############################

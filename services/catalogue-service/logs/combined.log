@@ -126,3 +126,62 @@
 {"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:35:35"}
 {"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:35:37"}
 {"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:36:05"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:36:08"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:36:35"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:36:39"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:37:06"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:37:10"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:37:38"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:37:41"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:38:08"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:38:11"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:38:39"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:38:44"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:39:12"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:39:12"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:39:40"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:39:43"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:40:11"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:40:13"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:40:41"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:40:44"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:41:11"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:41:15"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:41:42"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:41:45"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:42:13"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:42:15"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:42:43"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:42:46"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:43:14"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:43:16"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:43:43"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:43:49"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:44:17"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:44:19"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:44:46"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:44:46"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:45:13"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:45:15"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:45:43"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:45:45"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:46:13"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:46:15"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:46:42"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:46:45"}
+{"level":"error","message":"Error connecting to MongoDB: connect ECONNREFUSED 172.18.0.7:27018","service":"catalogue-service","timestamp":"2025-12-14 01:47:13"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:47:14"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2025-12-14 01:57:57"}
+{"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2025-12-14 01:57:57"}
+{"level":"info","message":"Product created: Wireless Mouse","service":"catalogue-service","timestamp":"2025-12-14 01:58:53"}
+{"level":"info","message":"Connected to RabbitMQ","service":"catalogue-service","timestamp":"2025-12-14 01:58:53"}
+{"level":"info","message":"Published event: product.created","service":"catalogue-service","timestamp":"2025-12-14 01:58:53"}
+{"level":"info","message":"Category created: Electronics","service":"catalogue-service","timestamp":"2025-12-14 02:04:07"}
+{"level":"info","message":"Published event: category.created","service":"catalogue-service","timestamp":"2025-12-14 02:04:07"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 13:39:22"}
+{"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 13:39:22"}
+{"level":"info","message":"Product created: Wireless Mouse","service":"catalogue-service","timestamp":"2026-02-02 13:48:01"}
+{"level":"info","message":"Connected to RabbitMQ","service":"catalogue-service","timestamp":"2026-02-02 13:48:01"}
+{"level":"info","message":"Published event: product.created","service":"catalogue-service","timestamp":"2026-02-02 13:48:01"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 14:12:55"}
+{"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 14:12:55"}

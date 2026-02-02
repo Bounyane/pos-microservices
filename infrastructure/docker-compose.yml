@@ -76,6 +76,7 @@ services:
       timeout: 10s
       retries: 5
     restart: unless-stopped
+    command: ["mongod", "--port", "27018", "--bind_ip_all"]
 
   order_mongodb:
     image: mongo:7
@@ -95,6 +96,7 @@ services:
       timeout: 10s
       retries: 5
     restart: unless-stopped
+    command: ["mongod", "--port", "27019", "--bind_ip_all"]
 
   analytic_mongodb:
     image: mongo:7
@@ -114,6 +116,7 @@ services:
       timeout: 10s
       retries: 5
     restart: unless-stopped
+    command: ["mongod", "--port", "27020", "--bind_ip_all"]
 
   #################################################
   # Application Services
