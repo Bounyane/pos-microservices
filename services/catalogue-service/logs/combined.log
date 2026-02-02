@@ -185,3 +185,11 @@
 {"level":"info","message":"Published event: product.created","service":"catalogue-service","timestamp":"2026-02-02 13:48:01"}
 {"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 14:12:55"}
 {"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 14:12:55"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 15:12:39"}
+{"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 15:12:39"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 15:29:34"}
+{"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 15:29:34"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 18:46:03"}
+{"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 18:46:03"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 19:09:58"}
+{"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 19:09:58"}

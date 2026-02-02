@@ -4,6 +4,7 @@ const Product = require('../models/Product');
 const Category = require('../models/Category');
 const Order = require('../models/Order');
 const OrderItem = require('../models/OrderItem');
+const Transaction = require('../models/Transaction');
 
 class MessageBroker {
     constructor() {
@@ -77,6 +78,32 @@ class MessageBroker {
                 }
             }
         });
+
+        // Transaction Events
+        const transactionExchange = 'transaction_events';
+        const transactionQueue = 'analytics_transaction_queue';
+
+        await this.channel.assertExchange(transactionExchange, 'topic', { durable: true });
+        await this.channel.assertQueue(transactionQueue, { durable: true });
+
+        // Bind to all transaction events
+        await this.channel.bindQueue(transactionQueue, transactionExchange, '#');
+
+        this.channel.consume(transactionQueue, async (msg) => {
+            if (msg) {
+                try {
+                    const content = JSON.parse(msg.content.toString());
+                    const routingKey = msg.fields.routingKey;
+                    logger.info(`Received message: ${routingKey}`);
+
+                    await this.handleTransactionEvent(routingKey, content);
+                    this.channel.ack(msg);
+                } catch (error) {
+                    logger.error(`Error processing message: ${error.message}`);
+                    this.channel.nack(msg, false, false);
+                }
+            }
+        });
     }
 
     async handleCatalogueEvent(routingKey, data) {
@@ -121,6 +148,23 @@ class MessageBroker {
                     { upsert: true, new: true }
                 );
                 logger.info(`Processed OrderItem: ${data._id}`);
+                break;
+            default:
+                logger.warn(`Unknown routing key: ${routingKey}`);
+        }
+    }
+
+    async handleTransactionEvent(routingKey, data) {
+        switch (routingKey) {
+            case 'transaction.created':
+                const transaction = new Transaction({
+                    orderId: data.orderId,
+                    customerId: data.customerId,
+                    cashback: data.cashback,
+                    timestamp: data.timestamp
+                });
+                await transaction.save();
+                logger.info(`Processed Transaction for order: ${data.orderId}`);
                 break;
             default:
                 logger.warn(`Unknown routing key: ${routingKey}`);

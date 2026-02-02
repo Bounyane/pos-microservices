@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package cashback;
+
+service CashbackService {
+  rpc GetCashback (CashbackRequest) returns (CashbackResponse);
+}
+
+message CashbackRequest {
+  string orderId = 1;
+  string customerId = 2;
+}
+
+message CashbackResponse {
+  double cashback = 1;
+}

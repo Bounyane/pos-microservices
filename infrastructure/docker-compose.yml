@@ -118,6 +118,26 @@ services:
     restart: unless-stopped
     command: ["mongod", "--port", "27020", "--bind_ip_all"]
 
+  transaction_mongodb:
+    image: mongo:7
+    container_name: pos-transaction-mongodb
+    ports:
+      - "27021:27021"
+    volumes:
+      - transaction_mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    command: ["mongod", "--port", "27021", "--bind_ip_all"]
+
   #################################################
   # Application Services
   #################################################
@@ -137,6 +157,7 @@ services:
       - catalogue-service
       - order-service
       - analytic-service
+      - transaction-service
     networks:
       - pos-network
 
@@ -270,6 +291,51 @@ services:
       - ../services/analytic-service:/app
       - node_modules_analytic:/app/node_modules
 
+  ai-service:
+    build:
+      context: ..
+      dockerfile: ./services/ai-service/Dockerfile
+    container_name: pos-ai-service
+    ports:
+      - "50052:50052"
+    environment:
+      - NODE_ENV=development
+      - GRPC_PORT=50052
+      - LOG_LEVEL=info
+    networks:
+      - pos-network
+    restart: unless-stopped
+    volumes:
+      - ../services/ai-service:/app
+      - ../shared/libraries/cashback.proto:/app/cashback.proto
+      - node_modules_ai:/app/node_modules
+
+  transaction-service:
+    build:
+      context: ..
+      dockerfile: ./services/transaction-service/Dockerfile
+    container_name: pos-transaction-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - transaction_mongodb
+      - rabbitmq
+      - ai-service
+    environment:
+      - NODE_ENV=development
+      - PORT=8086
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@transaction_mongodb:27021/pos_transaction?authSource=admin
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
+      - AI_SERVICE_GRPC_URL=ai-service:50052
+      - LOG_LEVEL=info
+    networks:
+      - pos-network
+    restart: unless-stopped
+    volumes:
+      - ../services/transaction-service:/app
+      - ../shared/libraries/cashback.proto:/app/cashback.proto
+      - node_modules_transaction:/app/node_modules
+
 #################################################
 # Volumes
 #################################################
@@ -279,12 +345,15 @@ volumes:
   catalogue_mongodb_data:
   order_mongodb_data:
   analytic_mongodb_data:
+  transaction_mongodb_data:
   node_modules_gateway:
   node_modules_auth:
   node_modules_user:
   node_modules_catalogue:
   node_modules_order:
   node_modules_analytic:
+  node_modules_ai:
+  node_modules_transaction:
 
 #################################################
 # Networks
