@@ -314,3 +314,15 @@
 {"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.4:5672","service":"analytic-service","timestamp":"2026-02-02 19:10:23"}
 {"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.4:5672","service":"analytic-service","timestamp":"2026-02-02 19:10:28"}
 {"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 19:10:33"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 19:16:55"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.5:5672","service":"analytic-service","timestamp":"2026-02-02 19:16:55"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 19:16:55"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.5:5672","service":"analytic-service","timestamp":"2026-02-02 19:17:00"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.5:5672","service":"analytic-service","timestamp":"2026-02-02 19:17:05"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.5:5672","service":"analytic-service","timestamp":"2026-02-02 19:17:10"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.5:5672","service":"analytic-service","timestamp":"2026-02-02 19:17:15"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.5:5672","service":"analytic-service","timestamp":"2026-02-02 19:17:20"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.5:5672","service":"analytic-service","timestamp":"2026-02-02 19:17:25"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 19:17:30"}
+{"level":"info","message":"Received message: transaction.created","service":"analytic-service","timestamp":"2026-02-02 19:19:12"}
+{"level":"info","message":"Processed Transaction for order: 693e099020d9829718a1f997","service":"analytic-service","timestamp":"2026-02-02 19:19:12"}

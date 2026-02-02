@@ -193,3 +193,5 @@
 {"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 18:46:03"}
 {"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 19:09:58"}
 {"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 19:09:58"}
+{"level":"info","message":"Catalogue service running on port 8083","service":"catalogue-service","timestamp":"2026-02-02 19:16:55"}
+{"level":"info","message":"MongoDB Connected: catalogue_mongodb","service":"catalogue-service","timestamp":"2026-02-02 19:16:55"}
