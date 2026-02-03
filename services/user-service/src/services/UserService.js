@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const logger = require('../utils/logger');
+const messageBroker = require('./MessageBroker');
 
 class UserService {
   /**
@@ -21,6 +22,13 @@ class UserService {
       await user.save();
 
       logger.info(`New user registered: ${user.email} with role: ${user.role}`);
+
+      // Publish user.registered event to RabbitMQ for wallet creation
+      await messageBroker.publishEvent('user_events', 'user.registered', {
+        userId: user._id.toString(),
+        email: user.email,
+        role: user.role
+      });
 
       return user.getPublicProfile();
     } catch (error) {
@@ -187,7 +195,7 @@ class UserService {
   }
 
 
-  
+
 
   /**
    * Verify user credentials (for gRPC)

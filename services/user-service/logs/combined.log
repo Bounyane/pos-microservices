@@ -21985,3 +21985,218 @@
 {"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:51:45"}
 {"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:52:15"}
 {"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:52:46"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:53:16"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:53:46"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:54:16"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:54:47"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:55:17"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:55:47"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:56:17"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:56:48"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:57:18"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:57:48"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:58:18"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:58:49"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:59:19"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 19:59:49"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:00:19"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:00:50"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:01:20"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:01:50"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:02:20"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:02:51"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:03:21"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:03:51"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:04:21"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:04:52"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:05:22"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:05:52"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:06:22"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:06:53"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:07:23"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:07:53"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:08:24"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:08:54"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:09:24"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:09:54"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:10:25"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:10:55"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:11:25"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:11:55"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:12:26"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:12:56"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:13:26"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:13:56"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:14:27"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:14:57"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:15:27"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:15:57"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:16:28"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:16:58"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:17:28"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:17:58"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:18:29"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:18:59"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:19:29"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:19:59"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:20:30"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:21:00"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:21:30"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:22:01"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:22:31"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:23:01"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:23:31"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:24:02"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:24:32"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:25:02"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:25:33"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:26:03"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:26:33"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:27:03"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:27:34"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:28:05"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:28:35"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:29:05"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:29:35"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:30:06"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:30:36"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:31:06"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:31:36"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:32:07"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:32:37"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:33:07"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:33:37"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:34:08"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:34:38"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:35:09"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:35:39"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:36:09"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:36:40"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:37:10"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:37:40"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:38:10"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:38:41"}
+{"ip":"::ffff:172.18.0.16","level":"info","message":"POST /api/users/register","service":"user-service","timestamp":"2026-02-02 20:38:45","userAgent":"PostmanRuntime/7.28.3"}
+{"level":"info","message":"New user registered: john.doe123@example.com with role: CUSTOMER","service":"user-service","timestamp":"2026-02-02 20:38:46"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:39:11"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:39:41"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:40:12"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:40:42"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:41:12"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:41:42"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:42:13"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:42:43"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:43:13"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:43:43"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 20:44:14"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2026-02-02 20:44:21"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2026-02-02 21:31:07"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:07"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2026-02-02 21:31:07"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:31:10"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:12"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:17"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2026-02-02 21:31:17"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2026-02-02 21:31:31"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:31"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2026-02-02 21:31:32"}
+{"ip":"::ffff:172.18.0.18","level":"info","message":"POST /api/users/register","service":"user-service","timestamp":"2026-02-02 21:31:34","userAgent":"PostmanRuntime/7.28.3"}
+{"level":"error","message":"Error registering user: User with this email or phone already exists","service":"user-service","stack":"Error: User with this email or phone already exists\n    at UserService.registerUser (/app/src/services/UserService.js:17:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (/app/src/controllers/userController.js:13:20)","timestamp":"2026-02-02 21:31:34"}
+{"level":"error","message":"User registration error: User with this email or phone already exists","service":"user-service","stack":"Error: User with this email or phone already exists\n    at UserService.registerUser (/app/src/services/UserService.js:17:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (/app/src/controllers/userController.js:13:20)","timestamp":"2026-02-02 21:31:34"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:31:34"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:36"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:41"}
+{"ip":"::ffff:172.18.0.18","level":"info","message":"POST /api/users/register","service":"user-service","timestamp":"2026-02-02 21:31:45","userAgent":"PostmanRuntime/7.28.3"}
+{"level":"error","message":"Error registering user: User with this email or phone already exists","service":"user-service","stack":"Error: User with this email or phone already exists\n    at UserService.registerUser (/app/src/services/UserService.js:17:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (/app/src/controllers/userController.js:13:20)","timestamp":"2026-02-02 21:31:45"}
+{"level":"error","message":"User registration error: User with this email or phone already exists","service":"user-service","stack":"Error: User with this email or phone already exists\n    at UserService.registerUser (/app/src/services/UserService.js:17:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (/app/src/controllers/userController.js:13:20)","timestamp":"2026-02-02 21:31:45"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:46"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:51"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:56"}
+{"ip":"::ffff:172.18.0.18","level":"info","message":"POST /api/users/register","service":"user-service","timestamp":"2026-02-02 21:31:57","userAgent":"PostmanRuntime/7.28.3"}
+{"level":"info","message":"New user registered: john.doe1234@example.com with role: CUSTOMER","service":"user-service","timestamp":"2026-02-02 21:31:57"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:31:57"}
+{"level":"error","message":"Error publishing event: Cannot read properties of null (reading 'assertExchange')","service":"user-service","timestamp":"2026-02-02 21:31:57"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:01"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:02"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:32:04"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:06"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:07"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:11"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:12"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:16"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:17"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:21"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:22"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:26"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:27"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:31"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:32"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:32:35"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:36"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:37"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:41"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:42"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:46"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:47"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:51"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:52"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:56"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:32:57"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:01"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:02"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:33:05"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:06"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:07"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:11"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:12"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:16"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:17"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:21"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:22"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:26"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:27"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:31"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:32"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:33:35"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:36"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED ::1:5672","service":"user-service","timestamp":"2026-02-02 21:33:37"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2026-02-02 21:33:39"}
+{"level":"info","message":"User service running on port 8082","service":"user-service","timestamp":"2026-02-02 21:35:08"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.6:5672","service":"user-service","timestamp":"2026-02-02 21:35:08"}
+{"level":"info","message":"MongoDB Connected: usermongodb","service":"user-service","timestamp":"2026-02-02 21:35:08"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:35:09"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.6:5672","service":"user-service","timestamp":"2026-02-02 21:35:13"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.6:5672","service":"user-service","timestamp":"2026-02-02 21:35:18"}
+{"ip":"::ffff:172.18.0.18","level":"info","message":"POST /api/users/register","service":"user-service","timestamp":"2026-02-02 21:35:19","userAgent":"PostmanRuntime/7.28.3"}
+{"level":"info","message":"New user registered: john.doe12345@example.com with role: CUSTOMER","service":"user-service","timestamp":"2026-02-02 21:35:20"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.6:5672","service":"user-service","timestamp":"2026-02-02 21:35:20"}
+{"level":"error","message":"Error publishing event: Cannot read properties of null (reading 'assertExchange')","service":"user-service","timestamp":"2026-02-02 21:35:20"}
+{"level":"info","message":"Connected to RabbitMQ","service":"user-service","timestamp":"2026-02-02 21:35:23"}
+{"level":"info","message":"Connected to RabbitMQ","service":"user-service","timestamp":"2026-02-02 21:35:25"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:35:39"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:36:09"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:36:39"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:37:09"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:37:40"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:38:10"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:38:40"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:39:10"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:39:41"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:40:11"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:40:41"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:41:11"}
+{"ip":"::ffff:172.18.0.18","level":"info","message":"POST /api/users/register","service":"user-service","timestamp":"2026-02-02 21:41:41","userAgent":"PostmanRuntime/7.28.3"}
+{"level":"error","message":"Error registering user: User with this email or phone already exists","service":"user-service","stack":"Error: User with this email or phone already exists\n    at UserService.registerUser (/app/src/services/UserService.js:17:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (/app/src/controllers/userController.js:13:20)","timestamp":"2026-02-02 21:41:41"}
+{"level":"error","message":"User registration error: User with this email or phone already exists","service":"user-service","stack":"Error: User with this email or phone already exists\n    at UserService.registerUser (/app/src/services/UserService.js:17:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (/app/src/controllers/userController.js:13:20)","timestamp":"2026-02-02 21:41:41"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:41:42"}
+{"ip":"::ffff:172.18.0.18","level":"info","message":"POST /api/users/register","service":"user-service","timestamp":"2026-02-02 21:41:50","userAgent":"PostmanRuntime/7.28.3"}
+{"level":"info","message":"New user registered: john.doe123465@example.com with role: CUSTOMER","service":"user-service","timestamp":"2026-02-02 21:41:50"}
+{"level":"info","message":"Published event: user.registered","service":"user-service","timestamp":"2026-02-02 21:41:50"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:42:12"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:42:42"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:43:12"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:43:42"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:44:13"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:44:43"}
+{"ip":"::1","level":"info","message":"GET /api/health","service":"user-service","timestamp":"2026-02-02 21:45:13"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"user-service","timestamp":"2026-02-02 21:45:26"}

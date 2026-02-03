@@ -1,7 +1,11 @@
 const app = require('./src/app');
 const config = require('./src/config/app');
 const logger = require('./src/utils/logger');
-const grpcService = require('./src/grpcServer'); 
+const grpcService = require('./src/grpcServer');
+const messageBroker = require('./src/services/MessageBroker');
+
+// Connect to RabbitMQ
+messageBroker.connect();
 
 const PORT = config.port;
 

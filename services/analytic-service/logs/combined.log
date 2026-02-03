@@ -326,3 +326,62 @@
 {"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 19:17:30"}
 {"level":"info","message":"Received message: transaction.created","service":"analytic-service","timestamp":"2026-02-02 19:19:12"}
 {"level":"info","message":"Processed Transaction for order: 693e099020d9829718a1f997","service":"analytic-service","timestamp":"2026-02-02 19:19:12"}
+{"level":"info","message":"Received message: transaction.created","service":"analytic-service","timestamp":"2026-02-02 20:42:20"}
+{"level":"info","message":"Processed Transaction for order: 693e099020d9829718a1f997","service":"analytic-service","timestamp":"2026-02-02 20:42:20"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 20:44:56"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:44:56"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 20:44:56"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:45:01"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:45:06"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:45:11"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:45:16"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 20:45:21"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 20:54:38"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.7:5672","service":"analytic-service","timestamp":"2026-02-02 20:54:38"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 20:54:38"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.7:5672","service":"analytic-service","timestamp":"2026-02-02 20:54:43"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.7:5672","service":"analytic-service","timestamp":"2026-02-02 20:54:48"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.7:5672","service":"analytic-service","timestamp":"2026-02-02 20:54:53"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 20:54:58"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 20:58:37"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:58:38"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 20:58:38"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:58:43"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:58:48"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 20:58:53"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 20:58:58"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 21:08:00"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:08:00"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 21:08:00"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:08:05"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:08:10"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:08:15"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:08:20"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 21:08:25"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 21:14:11"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.4:5672","service":"analytic-service","timestamp":"2026-02-02 21:14:11"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 21:14:12"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.4:5672","service":"analytic-service","timestamp":"2026-02-02 21:14:16"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.4:5672","service":"analytic-service","timestamp":"2026-02-02 21:14:22"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 21:14:27"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 21:24:08"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:24:08"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 21:24:08"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:24:13"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:24:18"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:24:23"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 21:24:28"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 21:31:32"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:31:32"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 21:31:32"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:31:37"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.8:5672","service":"analytic-service","timestamp":"2026-02-02 21:31:42"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 21:31:47"}
+{"level":"info","message":"Analytics Service running on port 8085","service":"analytic-service","timestamp":"2026-02-02 21:35:07"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 21:35:07"}
+{"level":"info","message":"MongoDB Connected: analytic_mongodb","service":"analytic-service","timestamp":"2026-02-02 21:35:07"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 21:35:12"}
+{"level":"error","message":"Error connecting to RabbitMQ: connect ECONNREFUSED 172.18.0.6:5672","service":"analytic-service","timestamp":"2026-02-02 21:35:17"}
+{"level":"info","message":"Connected to RabbitMQ","service":"analytic-service","timestamp":"2026-02-02 21:35:22"}
+{"level":"info","message":"Received message: transaction.created","service":"analytic-service","timestamp":"2026-02-02 21:44:03"}
+{"level":"info","message":"Processed Transaction for order: 693e099020d9829718a1f997","service":"analytic-service","timestamp":"2026-02-02 21:44:03"}
