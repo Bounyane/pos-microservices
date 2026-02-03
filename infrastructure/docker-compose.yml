@@ -138,6 +138,26 @@ services:
     restart: unless-stopped
     command: ["mongod", "--port", "27021", "--bind_ip_all"]
 
+  wallet_mongodb:
+    image: mongo:7
+    container_name: pos-wallet-mongodb
+    ports:
+      - "27022:27022"
+    volumes:
+      - wallet_mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
+    networks:
+      - pos-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    command: ["mongod", "--port", "27022", "--bind_ip_all"]
+
   #################################################
   # Application Services
   #################################################
@@ -158,6 +178,7 @@ services:
       - order-service
       - analytic-service
       - transaction-service
+      - wallet-service
     networks:
       - pos-network
 
@@ -208,6 +229,7 @@ services:
       - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@userMongodb:27017/pos_users?authSource=admin
       - JWT_SECRET=test_key
       - ALLOWED_ORIGINS=true
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
     networks:
       - pos-network
     healthcheck:
@@ -336,6 +358,29 @@ services:
       - ../shared/libraries/cashback.proto:/app/cashback.proto
       - node_modules_transaction:/app/node_modules
 
+  wallet-service:
+    build:
+      context: ..
+      dockerfile: ./services/wallet-service/Dockerfile
+    container_name: pos-wallet-service
+    ports:
+      - "8087:8087"
+    depends_on:
+      - wallet_mongodb
+      - rabbitmq
+    environment:
+      - NODE_ENV=development
+      - PORT=8087
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@wallet_mongodb:27022/pos_wallet?authSource=admin
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
+      - LOG_LEVEL=info
+    networks:
+      - pos-network
+    restart: unless-stopped
+    volumes:
+      - ../services/wallet-service:/app
+      - node_modules_wallet:/app/node_modules
+
 #################################################
 # Volumes
 #################################################
@@ -346,6 +391,7 @@ volumes:
   order_mongodb_data:
   analytic_mongodb_data:
   transaction_mongodb_data:
+  wallet_mongodb_data:
   node_modules_gateway:
   node_modules_auth:
   node_modules_user:
@@ -354,6 +400,7 @@ volumes:
   node_modules_analytic:
   node_modules_ai:
   node_modules_transaction:
+  node_modules_wallet:
 
 #################################################
 # Networks
