@@ -5,7 +5,7 @@ const orderController = require('../controllers/orderController');
 // Add Order (POST) - Direct insert
 router.post('/asyncOrder', orderController.asyncOrder);
 
-// Add OrderItem (POST) - Direct insert
-router.post('/asyncOrderItem', orderController.asyncOrderItem);
+// Update Order (Post)
+router.post('/updateOrder', orderController.updateOrder);
 
 module.exports = router;

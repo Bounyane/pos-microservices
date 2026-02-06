@@ -1,5 +1,4 @@
 const Order = require('../models/order');
-const OrderItem = require('../models/order_items');
 const logger = require('../utils/logger');
 
 class OrderService {
@@ -7,13 +6,13 @@ class OrderService {
      * Add a new order directly to database
      */
     async asyncOrder(data) {
-        const { managerId, numberOrder, waiterId, statusOrder } = data;
+        const { managerId, waiterId, statusOrder, products } = data;
 
         const order = await Order.create({
             managerId,
-            numberOrder,
             waiterId,
-            statusOrder: statusOrder !== undefined ? statusOrder : true
+            statusOrder: statusOrder || 'pending',
+            products: products || []
         });
 
         logger.info(`order created: ${order._id}`);
@@ -21,18 +20,27 @@ class OrderService {
     }
 
     /**
-     * Add a new orderItem directly to database
+     * Update an existing order
      */
-    async asyncOrderItem(data) {
-        const {
-            orderId, productId, quantity
-        } = data;
+    async updateOrder(data) {
+        const { orderId, waiterId, statusOrder, products } = data;
 
-        const order = await OrderItem.create({
-            orderId, productId, quantity
-        });
+        const updateData = {};
+        if (waiterId) updateData.waiterId = waiterId;
+        if (statusOrder) updateData.statusOrder = statusOrder;
+        if (products) updateData.products = products;
 
-        logger.info(`orderItemSaved created: ${order._id}`);
+        const order = await Order.findByIdAndUpdate(
+            orderId,
+            updateData,
+            { new: true, runValidators: true }
+        );
+
+        if (!order) {
+            throw new Error('Order not found');
+        }
+
+        logger.info(`order updated: ${order._id}`);
         return order;
     }
 }

@@ -7,18 +7,26 @@ const messageBroker = require('../services/MessageBroker');
  */
 exports.asyncOrder = async (req, res) => {
     try {
-        const { managerId, numberOrder, waiterId, statusOrder } = req.body;
+        const { managerId, waiterId, statusOrder, products } = req.body;
 
-        if (!managerId || !numberOrder || !waiterId || !statusOrder) {
+        if (!managerId || !waiterId || !statusOrder || !products) {
             return res.status(400).json({
                 success: false,
-                message: 'ManagerId and numberOrder , waiterId ,statusOrder are required'
+                message: 'managerId, waiterId, statusOrder, and products are required'
+            });
+        }
+
+        // Validate products array
+        if (!Array.isArray(products) || products.length === 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'products must be a non-empty array'
             });
         }
 
         const order = await orderService.asyncOrder(req.body);
         await messageBroker.publishEvent('order_events', 'order.created', order);
-        res.status(201).json({ success: true, data: order });
+        res.status(201).json({ success: true, orderId: order._id });
     } catch (error) {
         logger.error(`Error adding order: ${error.message}`);
         res.status(500).json({
@@ -30,24 +38,24 @@ exports.asyncOrder = async (req, res) => {
 };
 
 /**
- * Add orderItem - Direct insert to database
+ * Update order
  */
-exports.asyncOrderItem = async (req, res) => {
+exports.updateOrder = async (req, res) => {
     try {
-        const { orderId, productId, quantity } = req.body;
+        const { orderId, waiterId, statusOrder, products } = req.body;
 
-        if (!orderId || !productId, !quantity) {
+        if (!orderId) {
             return res.status(400).json({
                 success: false,
-                message: 'Missing required fields: managerId, categoryId, name, price'
+                message: 'orderId is required'
             });
         }
 
-        const order = await orderService.asyncOrderItem(req.body);
-        await messageBroker.publishEvent('order_events', 'orderItem.created', order);
-        res.status(201).json({ success: true, data: order });
+        const order = await orderService.updateOrder(req.body);
+        await messageBroker.publishEvent('order_events', 'order.updated', order);
+        res.status(200).json({ success: true, data: order });
     } catch (error) {
-        logger.error(`Error adding orderItem: ${error.message}`);
+        logger.error(`Error updating order: ${error.message}`);
         res.status(500).json({
             success: false,
             message: 'Server Error',

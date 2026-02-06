@@ -189,3 +189,10 @@
 {"level":"error","message":"Error publishing event: Cannot read properties of null (reading 'assertExchange')","service":"user-service","timestamp":"2026-02-02 21:35:20"}
 {"level":"error","message":"Error registering user: User with this email or phone already exists","service":"user-service","stack":"Error: User with this email or phone already exists\n    at UserService.registerUser (/app/src/services/UserService.js:17:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (/app/src/controllers/userController.js:13:20)","timestamp":"2026-02-02 21:41:41"}
 {"level":"error","message":"User registration error: User with this email or phone already exists","service":"user-service","stack":"Error: User with this email or phone already exists\n    at UserService.registerUser (/app/src/services/UserService.js:17:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (/app/src/controllers/userController.js:13:20)","timestamp":"2026-02-02 21:41:41"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.9:5672","service":"user-service","timestamp":"2026-02-03 23:19:42"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.9:5672","service":"user-service","timestamp":"2026-02-03 23:19:47"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.9:5672","service":"user-service","timestamp":"2026-02-03 23:19:52"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.9:5672","service":"user-service","timestamp":"2026-02-03 23:19:57"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.7:5672","service":"user-service","timestamp":"2026-02-03 23:50:59"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.7:5672","service":"user-service","timestamp":"2026-02-03 23:51:04"}
+{"level":"error","message":"RabbitMQ connection error: connect ECONNREFUSED 172.18.0.7:5672","service":"user-service","timestamp":"2026-02-03 23:51:09"}

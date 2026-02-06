@@ -5,19 +5,26 @@ const OrderSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    numberOrder: {
-        type: String,
-        required: true
-
-    },
     waiterId: {
         type: String,
         required: true
     },
     statusOrder: {
-        type: Boolean,
-        required: true
+        type: String,
+        enum: ['pending', 'payed', 'refused'],
+        required: true,
+        default: 'pending'
     },
+    products: [{
+        productId: {
+            type: String,
+            required: true
+        },
+        quantity: {
+            type: Number,
+            required: true
+        }
+    }]
 }, {
     timestamps: {
         createdAt: 'created_at',

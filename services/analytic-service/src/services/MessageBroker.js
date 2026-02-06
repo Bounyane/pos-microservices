@@ -3,7 +3,6 @@ const logger = require('../utils/logger');
 const Product = require('../models/Product');
 const Category = require('../models/Category');
 const Order = require('../models/Order');
-const OrderItem = require('../models/OrderItem');
 const Transaction = require('../models/Transaction');
 
 class MessageBroker {
@@ -134,20 +133,13 @@ class MessageBroker {
     async handleOrderEvent(routingKey, data) {
         switch (routingKey) {
             case 'order.created':
+            case 'order.updated':
                 await Order.findOneAndUpdate(
                     { _id: data._id },
                     data,
                     { upsert: true, new: true }
                 );
                 logger.info(`Processed Order: ${data._id}`);
-                break;
-            case 'orderItem.created':
-                await OrderItem.findOneAndUpdate(
-                    { _id: data._id },
-                    data,
-                    { upsert: true, new: true }
-                );
-                logger.info(`Processed OrderItem: ${data._id}`);
                 break;
             default:
                 logger.warn(`Unknown routing key: ${routingKey}`);
