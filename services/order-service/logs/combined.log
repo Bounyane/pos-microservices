@@ -391,3 +391,13 @@
 {"level":"info","message":"order updated: 698285b420ba12892d9c7e8c","service":"catalogue-service","timestamp":"2026-02-04 00:00:18"}
 {"level":"info","message":"Connected to RabbitMQ","service":"catalogue-service","timestamp":"2026-02-04 00:00:18"}
 {"level":"info","message":"Published event: order.updated","service":"catalogue-service","timestamp":"2026-02-04 00:00:18"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2026-03-13 10:08:54"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2026-03-13 10:08:55"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2026-03-13 10:15:27"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2026-03-13 10:15:28"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2026-03-13 10:27:12"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2026-03-13 10:27:12"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2026-03-13 10:32:29"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2026-03-13 10:32:29"}
+{"level":"info","message":"Order service running on port 8084","service":"catalogue-service","timestamp":"2026-03-14 16:26:24"}
+{"level":"info","message":"MongoDB Connected: order_mongodb","service":"catalogue-service","timestamp":"2026-03-14 16:26:24"}

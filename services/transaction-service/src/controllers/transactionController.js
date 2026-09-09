@@ -19,14 +19,14 @@ exports.createTransaction = async (req, res) => {
         // Process transaction (service handles AI call, DB save, and RabbitMQ publishing)
         const transaction = await transactionService.createTransaction(orderId, customerId);
 
-        // Return response with cashback
+        // Return response with cashback and blockchain tx
         res.status(201).json({
             success: true,
             data: {
                 orderId: transaction.orderId,
                 customerId: transaction.customerId,
                 cashback: transaction.cashback,
-                message: 'Transaction processed successfully'
+                blockchainTx: transaction.blockchainTx
             }
         });
     } catch (error) {

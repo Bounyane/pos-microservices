@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package cashback;
+
+service CashbackService {
+  rpc GetCashback (CashbackRequest) returns (CashbackResponse);
+}
+
+// Extended request with the 10 ML feature fields
+message CashbackRequest {
+  // Original fields (kept for backward compat)
+  string orderId     = 1;
+  string customerId  = 2;
+
+  // ML feature fields
+  float time_last_transaction = 3;   // Days since last transaction
+  float time_last_login       = 4;   // Days since last app login
+  float quantity              = 5;   // Number of items in the order
+  float price                 = 6;   // Total order price
+  float balance               = 7;   // Customer wallet balance
+  int32 has_wallet            = 8;   // 1 = has wallet, 0 = no wallet
+  int32 vat_type              = 9;   // VAT category code
+  float vat_percentage        = 10;  // VAT rate applied
+  int32 store_type            = 11;  // Store category code
+  float operating_hours       = 12;  // Store daily operating hours
+}
+
+message CashbackResponse {
+  double cashback             = 1;   // Legacy field (raw value)
+  double cashback_percentage  = 2;   // ML-computed cashback percentage
+}

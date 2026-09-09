@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/database');
 const messageBroker = require('./services/MessageBroker');
+const analyticRoutes = require('./routes/analyticRoute');
 const logger = require('./utils/logger');
 
 const app = express();
@@ -15,6 +16,9 @@ connectDB();
 
 // Connect to RabbitMQ
 messageBroker.connect();
+
+// Routes
+app.use('/api/analytics', analyticRoutes);
 
 // Health Check Route
 app.get('/health', (req, res) => {

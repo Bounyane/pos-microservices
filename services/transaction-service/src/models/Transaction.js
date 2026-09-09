@@ -15,6 +15,10 @@ const transactionSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    blockchainTx: {
+        type: String,
+        default: null
+    },
     timestamp: {
         type: Date,
         default: Date.now
