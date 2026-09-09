@@ -1,6 +1,6 @@
-# 🛒 Produify — Microservices POS Platform
+#  Microservices POS Platform
 
-> A fully containerized, event-driven Point-of-Sale (POS) backend built with a microservices architecture, featuring blockchain transaction storage, AI-powered cashback, and real-time analytics.
+> A hands-on learning project exploring event-driven microservices architecture through a containerized Point-of-Sale (POS) backend — covering blockchain-based transaction storage, AI-powered cashback logic, and real-time analytics
 
 ---
 
