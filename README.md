@@ -1,6 +1,6 @@
 #  Microservices POS Platform
 
-> A hands-on learning project exploring event-driven microservices architecture through a containerized Point-of-Sale (POS) backend — covering blockchain-based transaction storage, AI-powered cashback logic, and real-time analytics
+> A hands-on learning project exploring event-driven microservices architecture through a containerized Point-of-Sale (POS) backend covering blockchain-based transaction storage, AI-powered cashback logic, and real-time analytics
 
 ---
 
@@ -8,25 +8,25 @@
 
 ```mermaid
 graph TD
-    Client(["🖥️ Client / Frontend"])
+    Client([" Client / Frontend"])
 
     subgraph Gateway["API Gateway (Nginx / OpenResty) — :80"]
         GW["Lua Auth Middleware\nRoute Proxy"]
     end
 
     subgraph Services["Application Services"]
-        AUTH["🔐 Auth Service\n:8081"]
-        USER["👤 User Service\n:8082 | gRPC :50051"]
-        CAT["📦 Catalogue Service\n:8083"]
-        ORD["🧾 Order Service\n:8084"]
-        ANA["📊 Analytic Service\n:8085"]
-        TXN["💳 Transaction Service\n:8086"]
-        WAL["👛 Wallet Service\n:8087"]
-        AI["🤖 AI Service (Python)\ngRPC :50052"]
+        AUTH[" Auth Service\n:8081"]
+        USER[" User Service\n:8082 | gRPC :50051"]
+        CAT[" Catalogue Service\n:8083"]
+        ORD[" Order Service\n:8084"]
+        ANA[" Analytic Service\n:8085"]
+        TXN[" Transaction Service\n:8086"]
+        WAL[" Wallet Service\n:8087"]
+        AI[" AI Service (Python)\ngRPC :50052"]
     end
 
     subgraph Messaging["Message Broker"]
-        MQ["🐇 RabbitMQ\n:5672 | UI :15672"]
+        MQ[" RabbitMQ\n:5672 | UI :15672"]
     end
 
     subgraph Databases["Databases (MongoDB)"]
@@ -39,11 +39,11 @@ graph TD
     end
 
     subgraph Cache["Cache"]
-        RDS["⚡ Redis\n:6379"]
+        RDS[" Redis\n:6379"]
     end
 
     subgraph Blockchain["Blockchain (Hardhat)"]
-        SC["📜 TransactionStore.sol\nSolidity Smart Contract"]
+        SC[" TransactionStore.sol\nSolidity Smart Contract"]
     end
 
     Client --> GW
@@ -78,10 +78,10 @@ graph TD
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
-produify-microservices/
+pos-microservices/
 │
 ├── services/                    # All microservices
 │   ├── api-gateway/             # Nginx/OpenResty — reverse proxy + auth
@@ -116,7 +116,7 @@ produify-microservices/
 
 ---
 
-## 🧩 Services Reference
+##  Services Reference
 
 | Service | Port | Protocol | Database | Description |
 |---|---|---|---|---|
@@ -141,7 +141,7 @@ produify-microservices/
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -159,7 +159,7 @@ produify-microservices/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
@@ -168,7 +168,7 @@ produify-microservices/
 ### 1. Clone the repository
 ```bash
 git clone <your-repo-url>
-cd produify-microservices
+cd pos-microservices
 ```
 
 ### 2. Set up environment variables
@@ -190,7 +190,7 @@ docker compose ps
 
 ---
 
-## 🌐 Key Endpoints (via Gateway on :80)
+##  Key Endpoints (via Gateway on :80)
 
 | Method | Path | Service | Description |
 |---|---|---|---|
@@ -207,7 +207,7 @@ docker compose ps
 
 ---
 
-## 📡 Inter-Service Communication
+##  Inter-Service Communication
 
 ```
 Auth ──gRPC──► User          (validate user identity)
@@ -221,7 +221,7 @@ User/Order/Transaction/Wallet ──AMQP──► RabbitMQ ──► Analytic
 
 ---
 
-## ⛓️ Smart Contract
+## Smart Contract
 
 `TransactionStore.sol` is a Solidity contract deployed on a local Hardhat blockchain.  
 It provides an **immutable on-chain record** of completed transactions.
@@ -235,7 +235,7 @@ npx hardhat run scripts/deploy.js --network localhost
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 Each service has its own test suite:
 
@@ -250,7 +250,7 @@ npm run test:coverage
 
 ---
 
-## 📦 Docker Useful Commands
+##  Docker Useful Commands
 
 ```bash
 # Start everything
@@ -268,7 +268,7 @@ docker compose -f infrastructure/docker-compose.yml up --build auth-service
 
 ---
 
-## 🔑 Environment Variables
+##  Environment Variables
 
 Key variables used across services (see each service's `.env.example`):
 
@@ -285,6 +285,3 @@ Key variables used across services (see each service's `.env.example`):
 
 ---
 
-## 📄 License
-
-MIT — see individual service `package.json` files for details.
